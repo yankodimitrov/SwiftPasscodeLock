@@ -8,9 +8,8 @@
 
 import Foundation
 
-public class GenericKey: KeychainItem {
+public class GenericKey: BaseKey {
     
-    public let name: String
     public var value: NSString?
     
     private var secretData: NSData? {
@@ -24,15 +23,15 @@ public class GenericKey: KeychainItem {
     
     init(keyName: String, value: String? = nil) {
         
-        name = keyName
         self.value = value
+        super.init(name: keyName)
     }
     
     ///////////////////////////////////////////////////////
     // MARK: - KeychainItem
     ///////////////////////////////////////////////////////
     
-    public func makeQueryForKeychain(keychain: KeychainService) -> KeychainQuery {
+    public override func makeQueryForKeychain(keychain: KeychainService) -> KeychainQuery {
         
         let query = KeychainQuery(keychain: keychain)
         
@@ -43,7 +42,7 @@ public class GenericKey: KeychainItem {
         return query
     }
     
-    public func fieldsToLock() -> NSDictionary {
+    public override func fieldsToLock() -> NSDictionary {
         
         var fields = NSMutableDictionary()
         
@@ -55,7 +54,7 @@ public class GenericKey: KeychainItem {
         return fields
     }
     
-    public func unlockData(data: NSData) {
+    public override func unlockData(data: NSData) {
         
         value = NSString(data: data, encoding: NSUTF8StringEncoding)
     }

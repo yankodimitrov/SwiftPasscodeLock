@@ -34,3 +34,41 @@ public protocol KeychainItem {
     */
     func unlockData(data: NSData)
 }
+
+
+/**
+    BaseKey
+*/
+public class BaseKey: KeychainItem {
+    
+    private let keyName: String
+    
+    public var name: String {
+        
+        return keyName
+    }
+    
+    init(name: String) {
+        
+        keyName = name
+    }
+    
+     public func makeQueryForKeychain(keychain: KeychainService) -> KeychainQuery {
+        
+        assertionFailure("should be overridden in subclass")
+        
+        return KeychainQuery(keychain: keychain)
+    }
+    
+    public func fieldsToLock() -> NSDictionary {
+        
+        assertionFailure("should be overridden in subclass")
+        
+        return NSDictionary()
+    }
+    
+    public func unlockData(data: NSData) {
+        
+        assertionFailure("should be overridden in subclass")
+    }
+}

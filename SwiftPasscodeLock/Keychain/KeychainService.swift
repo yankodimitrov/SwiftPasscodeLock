@@ -17,5 +17,5 @@ public protocol KeychainService {
     func add(key: KeychainItem) -> NSError?
     func update(key: KeychainItem) -> NSError?
     func remove(key: KeychainItem) -> NSError?
-    func get<T: KeychainItem>(key: T) -> (item: T?, error: NSError?)
+    func get<T: BaseKey>(key: T) -> (item: T?, error: NSError?)
 }

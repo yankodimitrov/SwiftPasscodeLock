@@ -8,9 +8,8 @@
 
 import Foundation
 
-public class ArchiveKey: KeychainItem {
+public class ArchiveKey: BaseKey {
     
-    public let name: String
     public var object: NSCoding?
     
     private var secretData: NSData? {
@@ -29,15 +28,15 @@ public class ArchiveKey: KeychainItem {
     
     init(keyName: String, object: NSCoding? = nil) {
         
-        name = keyName
         self.object = object
+        super.init(name: keyName)
     }
     
     ///////////////////////////////////////////////////////
     // MARK: - KeychainItem
     ///////////////////////////////////////////////////////
     
-    public func makeQueryForKeychain(keychain: KeychainService) -> KeychainQuery {
+    public override func makeQueryForKeychain(keychain: KeychainService) -> KeychainQuery {
         
         let query = KeychainQuery(keychain: keychain)
         
@@ -48,7 +47,7 @@ public class ArchiveKey: KeychainItem {
         return query
     }
     
-    public func fieldsToLock() -> NSDictionary {
+    public override func fieldsToLock() -> NSDictionary {
         
         var fields = NSMutableDictionary()
         
@@ -60,7 +59,7 @@ public class ArchiveKey: KeychainItem {
         return fields
     }
     
-    public func unlockData(data: NSData) {
+    public override func unlockData(data: NSData) {
         
         object = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? NSCoding
     }
