@@ -29,7 +29,7 @@ public class Keychain: KeychainService {
     // MARK: - Initializers
     ///////////////////////////////////////////////////////
     
-    init(serviceName name: String, accessMode: String = kSecAttrAccessibleWhenUnlocked, group: String? = nil) {
+    init(serviceName name: String, accessMode: String = kSecAttrAccessibleWhenUnlocked as String, group: String? = nil) {
         
         self.accessMode = accessMode
         serviceName = name

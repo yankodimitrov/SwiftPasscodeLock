@@ -23,11 +23,11 @@ public class KeychainQuery {
     
     init(keychain: KeychainService) {
         
-        addField(kSecAttrAccessible, withValue: keychain.accessMode)
+        addField(kSecAttrAccessible as String, withValue: keychain.accessMode)
         
         if let accessGroup = keychain.accessGroup {
             
-            addField(kSecAttrAccessGroup, withValue: accessGroup)
+            addField(kSecAttrAccessGroup as String, withValue: accessGroup)
         }
     }
     
@@ -37,7 +37,7 @@ public class KeychainQuery {
     
     func shouldReturnData() {
         
-        addField(kSecReturnData, withValue: true)
+        addField(kSecReturnData as String, withValue: true)
     }
     
     func addField(field: String, withValue value: AnyObject) {
@@ -47,6 +47,6 @@ public class KeychainQuery {
     
     func addFields(fields: NSDictionary) {
         
-        queryFields.addEntriesFromDictionary(fields)
+        queryFields.addEntriesFromDictionary(fields as [NSObject : AnyObject])
     }
 }

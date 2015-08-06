@@ -40,9 +40,9 @@ public class ArchiveKey: BaseKey {
         
         let query = KeychainQuery(keychain: keychain)
         
-        query.addField(kSecClass, withValue: kSecClassGenericPassword)
-        query.addField(kSecAttrService, withValue: keychain.serviceName)
-        query.addField(kSecAttrAccount, withValue: name)
+        query.addField(kSecClass as String, withValue: kSecClassGenericPassword)
+        query.addField(kSecAttrService as String, withValue: keychain.serviceName)
+        query.addField(kSecAttrAccount as String, withValue: name)
         
         return query
     }

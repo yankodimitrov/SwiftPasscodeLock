@@ -31,11 +31,10 @@ class LockSplashView: UIView {
         addSubview(icon)
         setupLayout()
     }
-    
-    convenience override init() {
-        
-        self.init(frame: UIScreen.mainScreen().bounds)
-    }
+	
+	convenience init() {
+		self.init(frame: UIScreen.mainScreen().bounds)
+	}
     
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
