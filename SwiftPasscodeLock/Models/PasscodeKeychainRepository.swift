@@ -28,7 +28,7 @@ public class PasscodeKeychainRepository: PasscodeRepository {
     
     convenience init() {
         
-        let keychain = Keychain(serviceName: "swift.passcode.lock", accessMode: kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly)
+        let keychain = Keychain(serviceName: "swift.passcode.lock", accessMode: kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly as String)
         
         self.init(keychainService: keychain)
     }
@@ -81,7 +81,7 @@ public class PasscodeKeychainRepository: PasscodeRepository {
         if let passcode = keychain.get(passcodeKey).item?.object as? NSArray {
             
             for item in passcode {
-                let sign = item as String
+                let sign = item as! String
                 
                 passcodeStack.append(sign)
             }
