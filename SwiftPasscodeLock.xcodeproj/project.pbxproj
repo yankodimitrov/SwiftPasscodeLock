@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C26E8D3E1B80729D00BFCF6C /* PasscodeNSUserDefaultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26E8D3D1B80729D00BFCF6C /* PasscodeNSUserDefaultsRepository.swift */; };
+		C26E8D401B8074C200BFCF6C /* PasscodeNSUserDefaultsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26E8D3F1B8074C200BFCF6C /* PasscodeNSUserDefaultsRepositoryTests.swift */; };
+		C26E8D411B80750A00BFCF6C /* PasscodeNSUserDefaultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26E8D3D1B80729D00BFCF6C /* PasscodeNSUserDefaultsRepository.swift */; };
 		D91528CB1A1932E5009A15B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91528CA1A1932E5009A15B1 /* AppDelegate.swift */; };
 		D91528D01A1932E5009A15B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D91528CE1A1932E5009A15B1 /* Main.storyboard */; };
 		D91528D21A1932E5009A15B1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D91528D11A1932E5009A15B1 /* Images.xcassets */; };
@@ -72,6 +75,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C26E8D3D1B80729D00BFCF6C /* PasscodeNSUserDefaultsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PasscodeNSUserDefaultsRepository.swift; path = Models/PasscodeNSUserDefaultsRepository.swift; sourceTree = "<group>"; };
+		C26E8D3F1B8074C200BFCF6C /* PasscodeNSUserDefaultsRepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeNSUserDefaultsRepositoryTests.swift; sourceTree = "<group>"; };
 		D91528C51A1932E5009A15B1 /* SwiftPasscodeLock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftPasscodeLock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D91528C91A1932E5009A15B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D91528CA1A1932E5009A15B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -243,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				D9FFD0BA1A28557F0043C82E /* PasscodeKeychainRepository.swift */,
+				C26E8D3D1B80729D00BFCF6C /* PasscodeNSUserDefaultsRepository.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -272,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				D92E340C1A274117005DBAA0 /* PasscodeKeychainRepositoryTests.swift */,
+				C26E8D3F1B8074C200BFCF6C /* PasscodeNSUserDefaultsRepositoryTests.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -414,6 +421,7 @@
 				D9FFD0AF1A2855600043C82E /* SetPasscodeState.swift in Sources */,
 				D9319A781A1B3B96009D2569 /* KeychainQuery.swift in Sources */,
 				D9319A761A1B3B96009D2569 /* KeychainItem.swift in Sources */,
+				C26E8D3E1B80729D00BFCF6C /* PasscodeNSUserDefaultsRepository.swift in Sources */,
 				D9319A741A1B3B96009D2569 /* Keychain.swift in Sources */,
 				D9FFD0BB1A28557F0043C82E /* PasscodeKeychainRepository.swift in Sources */,
 				D9FFD0C91A28559B0043C82E /* PasscodeButton.swift in Sources */,
@@ -442,7 +450,9 @@
 				D9FFD0B71A28556F0043C82E /* PasscodeLock.swift in Sources */,
 				D9319A791A1B3B96009D2569 /* KeychainQuery.swift in Sources */,
 				D9FFD0A81A2855600043C82E /* ChangePasscodeState.swift in Sources */,
+				C26E8D411B80750A00BFCF6C /* PasscodeNSUserDefaultsRepository.swift in Sources */,
 				D9FFD0B01A2855600043C82E /* SetPasscodeState.swift in Sources */,
+				C26E8D401B8074C200BFCF6C /* PasscodeNSUserDefaultsRepositoryTests.swift in Sources */,
 				D92E340D1A274117005DBAA0 /* PasscodeKeychainRepositoryTests.swift in Sources */,
 				D9FFD0B91A28556F0043C82E /* PasscodeLockPresenter.swift in Sources */,
 				D92E34171A284C6C005DBAA0 /* ConfirmPasscodeStateTests.swift in Sources */,
