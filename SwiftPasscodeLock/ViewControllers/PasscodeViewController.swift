@@ -27,7 +27,7 @@ public class PasscodeViewController: UIViewController, PasscodeLockPresentable, 
     // MARK: - Initializers
     ///////////////////////////////////////////////////////
     
-    init(passcodeLock lock: PasscodeLock) {
+    public init(passcodeLock lock: PasscodeLock) {
         
         passcodeLock = lock
         

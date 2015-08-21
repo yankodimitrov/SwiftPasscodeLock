@@ -21,7 +21,7 @@ public class PasscodeLockPresenter: NSObject {
     // MARK: - Initializers
     ///////////////////////////////////////////////////////
     
-    init(passcodeViewController: UIViewController, repository: PasscodeRepository, splashView: UIView) {
+    public init(passcodeViewController: UIViewController, repository: PasscodeRepository, splashView: UIView) {
         
         assert(passcodeViewController is PasscodeLockPresentable, "Passcode VC should conform to PasscodeLockPresentable")
         

@@ -64,7 +64,7 @@ public protocol PasscodeRepository: class {
 }
 
 /// MARK: - PasscodeLockPresentable
-@objc protocol PasscodeLockPresentable {
+@objc public protocol PasscodeLockPresentable {
     
     var onCorrectPasscode: ( () -> Void )? {set get}
 }
