@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PasscodeViewController" customModule="SwiftPasscodeLock" customModuleProvider="target">
@@ -22,7 +22,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQ4-3z-nXx" customClass="PasscodeButton" customModule="SwiftPasscodeLock" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQ4-3z-nXx" customClass="PasscodeButton" customModule="SwiftPasscodeLock">
                     <rect key="frame" x="175" y="205" width="70" height="70"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="70" id="AmQ-rN-n2V"/>
@@ -58,7 +58,7 @@
                         <action selector="passcodeButtonTap:" destination="-1" eventType="touchUpInside" id="4AF-NO-d5S"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uIY-d2-AZZ" customClass="PasscodeButton" customModule="SwiftPasscodeLock" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uIY-d2-AZZ" customClass="PasscodeButton" customModule="SwiftPasscodeLock">
                     <rect key="frame" x="265" y="205" width="70" height="70"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="70" id="FFC-NS-tTY"/>
@@ -94,7 +94,7 @@
                         <action selector="passcodeButtonTap:" destination="-1" eventType="touchUpInside" id="diV-MS-JcD"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8I-W2-UtA" customClass="PasscodeButton" customModule="SwiftPasscodeLock" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8I-W2-UtA" customClass="PasscodeButton" customModule="SwiftPasscodeLock">
                     <rect key="frame" x="355" y="205" width="70" height="70"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="70" id="X1K-WY-ubG"/>
@@ -130,7 +130,7 @@
                         <action selector="passcodeButtonTap:" destination="-1" eventType="touchUpInside" id="tjQ-yw-EHj"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ic1-U6-fER" customClass="PasscodeButton" customModule="SwiftPasscodeLock" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ic1-U6-fER" customClass="PasscodeButton" customModule="SwiftPasscodeLock">
                     <rect key="frame" x="175" y="285" width="70" height="70"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="70" id="2hP-rZ-AtZ"/>
@@ -166,7 +166,7 @@
                         <action selector="passcodeButtonTap:" destination="-1" eventType="touchUpInside" id="3F0-3t-gJd"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVD-Dl-jKk" customClass="PasscodeButton" customModule="SwiftPasscodeLock" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVD-Dl-jKk" customClass="PasscodeButton" customModule="SwiftPasscodeLock">
                     <rect key="frame" x="265" y="285" width="70" height="70"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="70" id="kJG-69-fxf"/>
@@ -202,7 +202,7 @@
                         <action selector="passcodeButtonTap:" destination="-1" eventType="touchUpInside" id="mBk-Vp-mKr"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5u4-Ry-hUs" customClass="PasscodeButton" customModule="SwiftPasscodeLock" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5u4-Ry-hUs" customClass="PasscodeButton" customModule="SwiftPasscodeLock">
                     <rect key="frame" x="355" y="285" width="70" height="70"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="70" id="9Id-Xc-Uc1"/>
@@ -238,7 +238,7 @@
                         <action selector="passcodeButtonTap:" destination="-1" eventType="touchUpInside" id="5sH-5y-BjN"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kXh-GZ-8Cc" customClass="PasscodeButton" customModule="SwiftPasscodeLock" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kXh-GZ-8Cc" customClass="PasscodeButton" customModule="SwiftPasscodeLock">
                     <rect key="frame" x="175" y="365" width="70" height="70"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="70" id="5Jm-k7-Y7I"/>
@@ -274,7 +274,7 @@
                         <action selector="passcodeButtonTap:" destination="-1" eventType="touchUpInside" id="JPz-IH-2Uo"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHT-NW-zfD" customClass="PasscodeButton" customModule="SwiftPasscodeLock" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHT-NW-zfD" customClass="PasscodeButton" customModule="SwiftPasscodeLock">
                     <rect key="frame" x="265" y="365" width="70" height="70"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="70" id="fKd-nb-ilb"/>
@@ -310,7 +310,7 @@
                         <action selector="passcodeButtonTap:" destination="-1" eventType="touchUpInside" id="fnC-RS-lKv"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9w8-hP-RJZ" customClass="PasscodeButton" customModule="SwiftPasscodeLock" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9w8-hP-RJZ" customClass="PasscodeButton" customModule="SwiftPasscodeLock">
                     <rect key="frame" x="355" y="365" width="70" height="70"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="70" id="7dT-3z-qhs"/>
@@ -346,7 +346,7 @@
                         <action selector="passcodeButtonTap:" destination="-1" eventType="touchUpInside" id="F8N-D6-nEC"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsC-4m-Z0v" customClass="PasscodeButton" customModule="SwiftPasscodeLock" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsC-4m-Z0v" customClass="PasscodeButton" customModule="SwiftPasscodeLock">
                     <rect key="frame" x="265" y="445" width="70" height="70"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="70" id="GVS-ch-BsZ"/>
@@ -397,7 +397,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K6v-Su-dYc" userLabel="Placeholders Wrapper">
                     <rect key="frame" x="243" y="159" width="114" height="16"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tjZ-00-TJ1" userLabel="Placeholder 1" customClass="PasscodePlaceholderView" customModule="SwiftPasscodeLock" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tjZ-00-TJ1" userLabel="Placeholder 1" customClass="PasscodePlaceholderView" customModule="SwiftPasscodeLock">
                             <rect key="frame" x="10" y="0.0" width="16" height="16"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -425,7 +425,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iqu-Gu-v5E" userLabel="Placeholder 2" customClass="PasscodePlaceholderView" customModule="SwiftPasscodeLock" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iqu-Gu-v5E" userLabel="Placeholder 2" customClass="PasscodePlaceholderView" customModule="SwiftPasscodeLock">
                             <rect key="frame" x="36" y="0.0" width="16" height="16"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -453,7 +453,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahh-lO-QaS" userLabel="Placeholder 3" customClass="PasscodePlaceholderView" customModule="SwiftPasscodeLock" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahh-lO-QaS" userLabel="Placeholder 3" customClass="PasscodePlaceholderView" customModule="SwiftPasscodeLock">
                             <rect key="frame" x="62" y="0.0" width="16" height="16"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -481,7 +481,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WqF-jS-dnC" userLabel="Placeholder 4" customClass="PasscodePlaceholderView" customModule="SwiftPasscodeLock" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WqF-jS-dnC" userLabel="Placeholder 4" customClass="PasscodePlaceholderView" customModule="SwiftPasscodeLock">
                             <rect key="frame" x="88" y="0.0" width="16" height="16"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
