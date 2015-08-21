@@ -124,7 +124,7 @@ public class PasscodeViewController: UIViewController, PasscodeLockPresentable, 
         
         var error: NSError?
         let context = LAContext()
-        let reason = NSLocalizedString("PasscodeLockTouchIDReason", tableName: "PasscodeLock", comment: "")
+        let reason = NSLocalizedString("PasscodeLockTouchIDReason", tableName: "PasscodeLock", bundle: getLocalizationBundle(), comment: "")
         
         if !context.canEvaluatePolicy(.DeviceOwnerAuthenticationWithBiometrics, error: &error) {
             
