@@ -31,7 +31,14 @@ public class PasscodeViewController: UIViewController, PasscodeLockPresentable, 
         
         passcodeLock = lock
         
-        super.init(nibName: "PasscodeView", bundle: nil)
+        // check if a custom nib exists in main bundle
+        if(NSBundle.mainBundle().pathForResource("PasscodeView", ofType: "nib") != nil) {
+            super.init(nibName: "PasscodeView", bundle: nil)
+        
+        // else use PasscodeView in our bundle
+        } else {
+            super.init(nibName: "PasscodeView", bundle: NSBundle(forClass: PasscodeViewController.self))
+        }
         
         passcodeLock.delegate = self
     }
