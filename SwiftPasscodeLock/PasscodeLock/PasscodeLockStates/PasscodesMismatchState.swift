@@ -20,12 +20,14 @@ public class PasscodesMismatchState: PasscodeLockState {
         title = NSLocalizedString(
             "PasscodeLockSetTitle",
             tableName: "PasscodeLock",
+            bundle: getLocalizationBundle(),
             comment: ""
         )
         
         description = NSLocalizedString(
             "PasscodeLockMismatchDescription",
             tableName: "PasscodeLock",
+            bundle: getLocalizationBundle(),
             comment: ""
         )
         

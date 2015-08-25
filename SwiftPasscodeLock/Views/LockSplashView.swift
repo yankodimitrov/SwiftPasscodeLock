@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LockSplashView: UIView {
+public class LockSplashView: UIView {
     
     private lazy var icon: UIImageView = {
         
@@ -36,7 +36,7 @@ class LockSplashView: UIView {
 		self.init(frame: UIScreen.mainScreen().bounds)
 	}
     
-    required init(coder aDecoder: NSCoder) {
+    public required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     

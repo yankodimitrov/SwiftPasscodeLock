@@ -28,12 +28,14 @@ public class ConfirmPasscodeState: PasscodeLockState {
         title = NSLocalizedString(
             "PasscodeLockConfirmTitle",
             tableName: "PasscodeLock",
+            bundle: getLocalizationBundle(),
             comment: ""
         )
         
         description = NSLocalizedString(
             "PasscodeLockConfirmDescription",
             tableName: "PasscodeLock",
+            bundle: getLocalizationBundle(),
             comment: ""
         )
         

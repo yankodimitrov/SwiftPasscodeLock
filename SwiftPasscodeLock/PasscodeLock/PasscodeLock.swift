@@ -64,7 +64,18 @@ public protocol PasscodeRepository: class {
 }
 
 /// MARK: - PasscodeLockPresentable
-@objc protocol PasscodeLockPresentable {
+@objc public protocol PasscodeLockPresentable {
     
     var onCorrectPasscode: ( () -> Void )? {set get}
+}
+
+// load the correct bundle for Localization string file
+func getLocalizationBundle() -> NSBundle {
+    // check if a Localization string file is overwritten in main bundle
+    if(NSBundle.mainBundle().pathForResource("PasscodeLock", ofType: "strings") != nil) {
+        return NSBundle.mainBundle()
+    }
+    
+    // return our module bundle
+    return NSBundle(forClass: PasscodeLockPresenter.self)
 }

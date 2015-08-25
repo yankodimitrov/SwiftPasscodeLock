@@ -27,11 +27,18 @@ public class PasscodeViewController: UIViewController, PasscodeLockPresentable, 
     // MARK: - Initializers
     ///////////////////////////////////////////////////////
     
-    init(passcodeLock lock: PasscodeLock) {
+    public init(passcodeLock lock: PasscodeLock) {
         
         passcodeLock = lock
         
-        super.init(nibName: "PasscodeView", bundle: nil)
+        // check if a custom nib exists in main bundle
+        if(NSBundle.mainBundle().pathForResource("PasscodeView", ofType: "nib") != nil) {
+            super.init(nibName: "PasscodeView", bundle: nil)
+        
+        // else use PasscodeView in our bundle
+        } else {
+            super.init(nibName: "PasscodeView", bundle: NSBundle(forClass: PasscodeViewController.self))
+        }
         
         passcodeLock.delegate = self
     }
@@ -124,7 +131,7 @@ public class PasscodeViewController: UIViewController, PasscodeLockPresentable, 
         
         var error: NSError?
         let context = LAContext()
-        let reason = NSLocalizedString("PasscodeLockTouchIDReason", tableName: "PasscodeLock", comment: "")
+        let reason = NSLocalizedString("PasscodeLockTouchIDReason", tableName: "PasscodeLock", bundle: getLocalizationBundle(), comment: "")
         
         if !context.canEvaluatePolicy(.DeviceOwnerAuthenticationWithBiometrics, error: &error) {
             

@@ -24,12 +24,14 @@ public class EnterPasscodeState: PasscodeLockState {
         title = NSLocalizedString(
             "PasscodeLockEnterTitle",
             tableName: "PasscodeLock",
+            bundle: getLocalizationBundle(),
             comment: ""
         )
         
         description = NSLocalizedString(
             "PasscodeLockEnterDescription",
             tableName: "PasscodeLock",
+            bundle: getLocalizationBundle(),
             comment: ""
         )
         

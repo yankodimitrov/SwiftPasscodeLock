@@ -8,13 +8,13 @@
 
 import Foundation
 
-class GenericPasscodeLock: PasscodeLock, PasscodeLockStateFactory {
+public class GenericPasscodeLock: PasscodeLock, PasscodeLockStateFactory {
     
-    var passcode: [String] {
+    public var passcode: [String] {
         return passcodeStack
     }
     
-    var state: PasscodeLockState? {
+    public var state: PasscodeLockState? {
         didSet {
             
             state?.passcodeLock = self
@@ -24,7 +24,7 @@ class GenericPasscodeLock: PasscodeLock, PasscodeLockStateFactory {
         }
     }
     
-    weak var delegate: PasscodeLockDelegate?
+    public weak var delegate: PasscodeLockDelegate?
     private lazy var passcodeStack = [String]()
     private let repository: PasscodeRepository
     private let length: Int
@@ -34,7 +34,7 @@ class GenericPasscodeLock: PasscodeLock, PasscodeLockStateFactory {
     // MARK: - Initializers
     ///////////////////////////////////////////////////////
     
-    init(length: UInt, repository: PasscodeRepository) {
+    public init(length: UInt, repository: PasscodeRepository) {
         
         self.length = Int(length)
         self.repository = repository
@@ -49,7 +49,7 @@ class GenericPasscodeLock: PasscodeLock, PasscodeLockStateFactory {
     // MARK: - PasscodeLock
     ///////////////////////////////////////////////////////
     
-    func enterSign(sign: String) {
+    public func enterSign(sign: String) {
         
         assert(sign != "", "Can't enter an empty passcode sign")
         
@@ -63,7 +63,7 @@ class GenericPasscodeLock: PasscodeLock, PasscodeLockStateFactory {
         }
     }
     
-    func removeSign() {
+    public func removeSign() {
         
         if passcodeStack.count == 0 {
             return
@@ -74,7 +74,7 @@ class GenericPasscodeLock: PasscodeLock, PasscodeLockStateFactory {
         delegate?.passcodeLock(self, removedSignAtIndex: signCounter)
     }
     
-    func resetSigns() {
+    public func resetSigns() {
         
         passcodeStack.removeAll(keepCapacity: true)
         signCounter = 0
@@ -85,27 +85,27 @@ class GenericPasscodeLock: PasscodeLock, PasscodeLockStateFactory {
     // MARK: - PasscodeLockStateFactory
     ///////////////////////////////////////////////////////
     
-    func makeEnterPasscodeState() -> PasscodeLockState {
+    public func makeEnterPasscodeState() -> PasscodeLockState {
         
         return EnterPasscodeState(passcodeRepository: repository)
     }
     
-    func makeSetPasscodeState() -> PasscodeLockState {
+    public func makeSetPasscodeState() -> PasscodeLockState {
         
         return SetPasscodeState()
     }
     
-    func makeConfirmPasscodeState() -> PasscodeLockState {
+    public func makeConfirmPasscodeState() -> PasscodeLockState {
         
         return ConfirmPasscodeState(passcode: passcode, passcodeRepository: repository)
     }
     
-    func makePasscodesMismatchState() -> PasscodeLockState {
+    public func makePasscodesMismatchState() -> PasscodeLockState {
         
         return PasscodesMismatchState()
     }
     
-    func makeChangePasscodeState() -> PasscodeLockState {
+    public func makeChangePasscodeState() -> PasscodeLockState {
         
         return ChangePasscodeState(passcodeRepository: repository)
     }

@@ -20,12 +20,14 @@ public class SetPasscodeState: PasscodeLockState {
         title = NSLocalizedString(
             "PasscodeLockSetTitle",
             tableName: "PasscodeLock",
+            bundle: getLocalizationBundle(),
             comment: ""
         )
         
         description = NSLocalizedString(
             "PasscodeLockSetDescription",
             tableName: "PasscodeLock",
+            bundle: getLocalizationBundle(),
             comment: ""
         )
         
