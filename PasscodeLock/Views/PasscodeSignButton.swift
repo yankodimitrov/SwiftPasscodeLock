@@ -1,5 +1,5 @@
 //
-//  PasscodeButton.swift
+//  PasscodeSignButton.swift
 //  PasscodeLock
 //
 //  Created by Yanko Dimitrov on 8/28/15.
@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-public class PasscodeButton: UIButton {
+public class PasscodeSignButton: UIButton {
     
     @IBInspectable
     public var passcodeSign: String = "1"

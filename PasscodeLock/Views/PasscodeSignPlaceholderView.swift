@@ -1,5 +1,5 @@
 //
-//  PasscodePlaceholderView.swift
+//  PasscodeSignPlaceholderView.swift
 //  PasscodeLock
 //
 //  Created by Yanko Dimitrov on 8/28/15.
@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-public class PasscodePlaceholderView: UIView {
+public class PasscodeSignPlaceholderView: UIView {
     
     public enum State {
         case Inactive

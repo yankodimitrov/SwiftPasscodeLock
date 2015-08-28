@@ -42,8 +42,8 @@
 		C9DC080C1B90DC38007A4DD0 /* SetPasscodeStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DC080B1B90DC38007A4DD0 /* SetPasscodeStateTests.swift */; settings = {ASSET_TAGS = (); }; };
 		C9DC080E1B90DC8F007A4DD0 /* ConfirmPasscodeStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DC080D1B90DC8F007A4DD0 /* ConfirmPasscodeStateTests.swift */; settings = {ASSET_TAGS = (); }; };
 		C9DC08101B90DD91007A4DD0 /* ChangePasscodeStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DC080F1B90DD91007A4DD0 /* ChangePasscodeStateTests.swift */; settings = {ASSET_TAGS = (); }; };
-		C9DC08121B90DE1B007A4DD0 /* PasscodePlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DC08111B90DE1B007A4DD0 /* PasscodePlaceholderView.swift */; settings = {ASSET_TAGS = (); }; };
-		C9DC08141B90DE50007A4DD0 /* PasscodeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DC08131B90DE50007A4DD0 /* PasscodeButton.swift */; settings = {ASSET_TAGS = (); }; };
+		C9DC08121B90DE1B007A4DD0 /* PasscodeSignPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DC08111B90DE1B007A4DD0 /* PasscodeSignPlaceholderView.swift */; settings = {ASSET_TAGS = (); }; };
+		C9DC08141B90DE50007A4DD0 /* PasscodeSignButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DC08131B90DE50007A4DD0 /* PasscodeSignButton.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,8 +85,8 @@
 		C9DC080B1B90DC38007A4DD0 /* SetPasscodeStateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetPasscodeStateTests.swift; sourceTree = "<group>"; };
 		C9DC080D1B90DC8F007A4DD0 /* ConfirmPasscodeStateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmPasscodeStateTests.swift; sourceTree = "<group>"; };
 		C9DC080F1B90DD91007A4DD0 /* ChangePasscodeStateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasscodeStateTests.swift; sourceTree = "<group>"; };
-		C9DC08111B90DE1B007A4DD0 /* PasscodePlaceholderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodePlaceholderView.swift; sourceTree = "<group>"; };
-		C9DC08131B90DE50007A4DD0 /* PasscodeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeButton.swift; sourceTree = "<group>"; };
+		C9DC08111B90DE1B007A4DD0 /* PasscodeSignPlaceholderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeSignPlaceholderView.swift; sourceTree = "<group>"; };
+		C9DC08131B90DE50007A4DD0 /* PasscodeSignButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeSignButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,8 +179,8 @@
 		C9DC07D31B90B1CE007A4DD0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C9DC08111B90DE1B007A4DD0 /* PasscodePlaceholderView.swift */,
-				C9DC08131B90DE50007A4DD0 /* PasscodeButton.swift */,
+				C9DC08111B90DE1B007A4DD0 /* PasscodeSignPlaceholderView.swift */,
+				C9DC08131B90DE50007A4DD0 /* PasscodeSignButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -322,9 +322,9 @@
 				C9DC07FF1B90D24A007A4DD0 /* SetPasscodeState.swift in Sources */,
 				C9DC08051B90D394007A4DD0 /* ChangePasscodeState.swift in Sources */,
 				C9DC08021B90D2BA007A4DD0 /* ConfirmPasscodeState.swift in Sources */,
-				C9DC08121B90DE1B007A4DD0 /* PasscodePlaceholderView.swift in Sources */,
+				C9DC08121B90DE1B007A4DD0 /* PasscodeSignPlaceholderView.swift in Sources */,
 				C9DC07F21B90C9DE007A4DD0 /* EnterPasscodeState.swift in Sources */,
-				C9DC08141B90DE50007A4DD0 /* PasscodeButton.swift in Sources */,
+				C9DC08141B90DE50007A4DD0 /* PasscodeSignButton.swift in Sources */,
 				C9DC07D81B90B261007A4DD0 /* PasscodeLockStateType.swift in Sources */,
 				C9DC07E11B90BBFD007A4DD0 /* PasscodeLock.swift in Sources */,
 				C9DC07F81B90CF29007A4DD0 /* Functions.swift in Sources */,
