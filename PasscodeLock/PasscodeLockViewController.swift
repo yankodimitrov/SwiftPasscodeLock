@@ -32,11 +32,13 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
     @IBOutlet public weak var deleteSignButton: UIButton!
     @IBOutlet public weak var placeholdersX: NSLayoutConstraint!
     
+    internal let passcodeConfiguration: PasscodeLockConfigurationType
     internal let passcodeLock: PasscodeLockType
     internal var isPlaceholdersAnimationCompleted = true
     
     public init(lockState: LockState, configuration: PasscodeLockConfigurationType) {
         
+        passcodeConfiguration = configuration
         passcodeLock = PasscodeLock(state: lockState.getState(), configuration: configuration)
         
         let nibName = "PasscodeLockView"
@@ -63,7 +65,7 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
     public override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        if passcodeLock.isTouchIDAllowed {
+        if passcodeConfiguration.shouldRequestTouchIDImmediately && passcodeLock.isTouchIDAllowed {
             
             passcodeLock.authenticateWithBiometrics()
         }

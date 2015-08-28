@@ -13,5 +13,6 @@ public protocol PasscodeLockConfigurationType {
     var repository: PasscodeRepositoryType {get}
     var passcodeLength: Int {get}
     var isTouchIDAllowed: Bool {get set}
+    var shouldRequestTouchIDImmediately: Bool {get}
     var maximumFailedAttempts: Int {get}
 }
