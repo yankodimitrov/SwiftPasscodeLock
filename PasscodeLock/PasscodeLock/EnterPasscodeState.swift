@@ -17,8 +17,8 @@ struct EnterPasscodeState: PasscodeLockStateType {
     
     init() {
         
-        title = "Enter Passcode"
-        description = "Enter your passcode"
+        title = localizedStringFor("PasscodeLockEnterTitle", comment: "Enter passcode title")
+        description = localizedStringFor("PasscodeLockEnterDescription", comment: "Enter passcode description")
     }
     
     func acceptPasscode(passcode: [String], fromLock lock: PasscodeLockType) {
