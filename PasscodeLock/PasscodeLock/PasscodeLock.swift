@@ -87,7 +87,7 @@ public class PasscodeLock: PasscodeLockType {
                 
             } else {
                 
-                self.delegate?.passcodeLockDidFailed(self)
+                self.delegate?.passcodeLockDidFail(self)
             }
         }
     }

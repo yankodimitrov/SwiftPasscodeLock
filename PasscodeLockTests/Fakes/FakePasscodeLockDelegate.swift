@@ -11,7 +11,7 @@ import Foundation
 class FakePasscodeLockDelegate: PasscodeLockTypeDelegate {
     
     func passcodeLockDidSucceed(lock: PasscodeLockType) {}
-    func passcodeLockDidFailed(lock: PasscodeLockType) {}
+    func passcodeLockDidFail(lock: PasscodeLockType) {}
     func passcodeLockDidChangeState(lock: PasscodeLockType) {}
     func passcodeLock(lock: PasscodeLockType, addedSignAtIndex index: Int) {}
     func passcodeLock(lock: PasscodeLockType, removedSignAtIndex index: Int) {}

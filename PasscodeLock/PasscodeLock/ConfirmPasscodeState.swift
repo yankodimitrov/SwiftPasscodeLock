@@ -36,7 +36,7 @@ struct ConfirmPasscodeState: PasscodeLockStateType {
             let nextState = SetPasscodeState()
             
             lock.changeStateTo(nextState)
-            lock.delegate?.passcodeLockDidFailed(lock)
+            lock.delegate?.passcodeLockDidFail(lock)
         }
     }
 }

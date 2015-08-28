@@ -61,7 +61,7 @@ class ConfirmPasscodeStateTests: XCTestCase {
             var didFailed = false
             var didChangedState = false
             
-            override func passcodeLockDidFailed(lock: PasscodeLockType) {
+            override func passcodeLockDidFail(lock: PasscodeLockType) {
                 
                 didFailed = true
             }

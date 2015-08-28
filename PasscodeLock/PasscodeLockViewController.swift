@@ -155,7 +155,7 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-    public func passcodeLockDidFailed(lock: PasscodeLockType) {
+    public func passcodeLockDidFail(lock: PasscodeLockType) {
         
         animateWrongPassword()
     }

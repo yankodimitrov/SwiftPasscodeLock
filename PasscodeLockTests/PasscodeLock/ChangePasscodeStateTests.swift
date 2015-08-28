@@ -52,7 +52,7 @@ class ChangePasscodeStateTests: XCTestCase {
             
             var called = false
             
-            override func passcodeLockDidFailed(lock: PasscodeLockType) {
+            override func passcodeLockDidFail(lock: PasscodeLockType) {
                 
                 called = true
             }
