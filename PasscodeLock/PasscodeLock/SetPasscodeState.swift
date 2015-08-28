@@ -23,5 +23,8 @@ struct SetPasscodeState: PasscodeLockStateType {
     
     func acceptPasscode(passcode: [String], fromLock lock: PasscodeLockType) {
         
+        let nextState = ConfirmPasscodeState(passcode: passcode)
+        
+        lock.changeStateTo(nextState)
     }
 }
