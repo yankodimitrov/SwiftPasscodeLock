@@ -37,6 +37,11 @@
 		C9DC08031B90D2BA007A4DD0 /* ConfirmPasscodeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DC08011B90D2BA007A4DD0 /* ConfirmPasscodeState.swift */; settings = {ASSET_TAGS = (); }; };
 		C9DC08051B90D394007A4DD0 /* ChangePasscodeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DC08041B90D394007A4DD0 /* ChangePasscodeState.swift */; settings = {ASSET_TAGS = (); }; };
 		C9DC08061B90D394007A4DD0 /* ChangePasscodeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DC08041B90D394007A4DD0 /* ChangePasscodeState.swift */; settings = {ASSET_TAGS = (); }; };
+		C9DC08081B90DAE6007A4DD0 /* EnterPasscodeStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DC08071B90DAE6007A4DD0 /* EnterPasscodeStateTests.swift */; settings = {ASSET_TAGS = (); }; };
+		C9DC080A1B90DB09007A4DD0 /* FakePasscodeLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DC08091B90DB09007A4DD0 /* FakePasscodeLock.swift */; settings = {ASSET_TAGS = (); }; };
+		C9DC080C1B90DC38007A4DD0 /* SetPasscodeStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DC080B1B90DC38007A4DD0 /* SetPasscodeStateTests.swift */; settings = {ASSET_TAGS = (); }; };
+		C9DC080E1B90DC8F007A4DD0 /* ConfirmPasscodeStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DC080D1B90DC8F007A4DD0 /* ConfirmPasscodeStateTests.swift */; settings = {ASSET_TAGS = (); }; };
+		C9DC08101B90DD91007A4DD0 /* ChangePasscodeStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DC080F1B90DD91007A4DD0 /* ChangePasscodeStateTests.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +78,11 @@
 		C9DC07FE1B90D24A007A4DD0 /* SetPasscodeState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetPasscodeState.swift; sourceTree = "<group>"; };
 		C9DC08011B90D2BA007A4DD0 /* ConfirmPasscodeState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmPasscodeState.swift; sourceTree = "<group>"; };
 		C9DC08041B90D394007A4DD0 /* ChangePasscodeState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasscodeState.swift; sourceTree = "<group>"; };
+		C9DC08071B90DAE6007A4DD0 /* EnterPasscodeStateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterPasscodeStateTests.swift; sourceTree = "<group>"; };
+		C9DC08091B90DB09007A4DD0 /* FakePasscodeLock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakePasscodeLock.swift; sourceTree = "<group>"; };
+		C9DC080B1B90DC38007A4DD0 /* SetPasscodeStateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetPasscodeStateTests.swift; sourceTree = "<group>"; };
+		C9DC080D1B90DC8F007A4DD0 /* ConfirmPasscodeStateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmPasscodeStateTests.swift; sourceTree = "<group>"; };
+		C9DC080F1B90DD91007A4DD0 /* ChangePasscodeStateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasscodeStateTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +183,10 @@
 			isa = PBXGroup;
 			children = (
 				C9DC07E41B90BCF9007A4DD0 /* PasscodeLockTests.swift */,
+				C9DC08071B90DAE6007A4DD0 /* EnterPasscodeStateTests.swift */,
+				C9DC080B1B90DC38007A4DD0 /* SetPasscodeStateTests.swift */,
+				C9DC080D1B90DC8F007A4DD0 /* ConfirmPasscodeStateTests.swift */,
+				C9DC080F1B90DD91007A4DD0 /* ChangePasscodeStateTests.swift */,
 			);
 			path = PasscodeLock;
 			sourceTree = "<group>";
@@ -184,6 +198,7 @@
 				C9DC07EB1B90C72A007A4DD0 /* FakePasscodeRepository.swift */,
 				C9DC07ED1B90C7CD007A4DD0 /* FakePasscodeLockConfiguration.swift */,
 				C9DC07EF1B90C8E1007A4DD0 /* FakePasscodeLockDelegate.swift */,
+				C9DC08091B90DB09007A4DD0 /* FakePasscodeLock.swift */,
 			);
 			path = Fakes;
 			sourceTree = "<group>";
@@ -317,19 +332,24 @@
 			files = (
 				C9DC07EC1B90C72A007A4DD0 /* FakePasscodeRepository.swift in Sources */,
 				C9DC08061B90D394007A4DD0 /* ChangePasscodeState.swift in Sources */,
+				C9DC080E1B90DC8F007A4DD0 /* ConfirmPasscodeStateTests.swift in Sources */,
 				C9DC07E51B90BCF9007A4DD0 /* PasscodeLockTests.swift in Sources */,
 				C9DC08031B90D2BA007A4DD0 /* ConfirmPasscodeState.swift in Sources */,
 				C9DC07F01B90C8E1007A4DD0 /* FakePasscodeLockDelegate.swift in Sources */,
 				C9DC07D91B90B261007A4DD0 /* PasscodeLockStateType.swift in Sources */,
 				C9DC07E21B90BBFD007A4DD0 /* PasscodeLock.swift in Sources */,
 				C9DC07EA1B90C690007A4DD0 /* FakePasscodeState.swift in Sources */,
+				C9DC08101B90DD91007A4DD0 /* ChangePasscodeStateTests.swift in Sources */,
 				C9DC07DC1B90B730007A4DD0 /* PasscodeLockConfigurationType.swift in Sources */,
 				C9DC07F31B90C9DE007A4DD0 /* EnterPasscodeState.swift in Sources */,
 				C9DC08001B90D24A007A4DD0 /* SetPasscodeState.swift in Sources */,
 				C9DC07EE1B90C7CD007A4DD0 /* FakePasscodeLockConfiguration.swift in Sources */,
+				C9DC080C1B90DC38007A4DD0 /* SetPasscodeStateTests.swift in Sources */,
+				C9DC08081B90DAE6007A4DD0 /* EnterPasscodeStateTests.swift in Sources */,
 				C9DC07DF1B90BA06007A4DD0 /* PasscodeLockType.swift in Sources */,
 				C9DC07D61B90B1F6007A4DD0 /* PasscodeRepositoryType.swift in Sources */,
 				C9DC07F91B90CF29007A4DD0 /* Functions.swift in Sources */,
+				C9DC080A1B90DB09007A4DD0 /* FakePasscodeLock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

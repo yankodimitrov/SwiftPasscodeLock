@@ -28,6 +28,7 @@ struct ConfirmPasscodeState: PasscodeLockStateType {
         
         if passcode == passcodeToConfirm {
             
+            lock.repository.savePasscode(passcode)
             lock.delegate?.passcodeLockDidSucceed(lock)
         
         } else {
