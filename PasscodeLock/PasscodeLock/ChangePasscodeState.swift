@@ -1,5 +1,5 @@
 //
-//  EnterPasscodeState.swift
+//  ChangePasscodeState.swift
 //  PasscodeLock
 //
 //  Created by Yanko Dimitrov on 8/28/15.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct EnterPasscodeState: PasscodeLockStateType {
+struct ChangePasscodeState: PasscodeLockStateType {
     
     let title: String
     let description: String
@@ -17,8 +17,8 @@ struct EnterPasscodeState: PasscodeLockStateType {
     
     init() {
         
-        title = localizedStringFor("PasscodeLockEnterTitle", comment: "Enter passcode title")
-        description = localizedStringFor("PasscodeLockEnterDescription", comment: "Enter passcode description")
+        title = localizedStringFor("PasscodeLockChangeTitle", comment: "Change passcode title")
+        description = localizedStringFor("PasscodeLockChangeDescription", comment: "Change passcode description")
     }
     
     func acceptPasscode(passcode: [String], fromLock lock: PasscodeLockType) {
@@ -30,7 +30,9 @@ struct EnterPasscodeState: PasscodeLockStateType {
         
         if passcode == currentPasscode {
             
-            lock.delegate?.passcodeLockDidSucceed(lock)
+            let nextState = SetPasscodeState()
+            
+            lock.changeStateTo(nextState)
             
         } else {
             
