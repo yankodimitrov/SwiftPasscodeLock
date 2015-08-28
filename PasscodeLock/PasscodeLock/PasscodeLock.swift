@@ -68,8 +68,9 @@ public class PasscodeLock: PasscodeLockType {
         guard isTouchIDAllowed else { return }
         
         let context = LAContext()
+        let reason = localizedStringFor("PasscodeLockTouchIDReason", comment: "TouchID authentication reason")
         
-        context.evaluatePolicy(.DeviceOwnerAuthenticationWithBiometrics, localizedReason: configuration.touchIDReasonText) {
+        context.evaluatePolicy(.DeviceOwnerAuthenticationWithBiometrics, localizedReason: reason) {
             success, error in
             
             self.handleTouchIDResult(success)

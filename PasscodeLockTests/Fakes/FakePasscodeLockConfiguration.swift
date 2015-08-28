@@ -14,7 +14,6 @@ class FakePasscodeLockConfiguration: PasscodeLockConfigurationType {
     let passcodeLength = 4
     var isTouchIDAllowed = false
     let maximumFailedAttempts = 3
-    let touchIDReasonText = ""
     
     init(repository: PasscodeRepositoryType) {
         
