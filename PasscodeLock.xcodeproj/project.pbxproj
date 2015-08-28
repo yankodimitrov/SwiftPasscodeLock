@@ -15,6 +15,8 @@
 		C9DC07D91B90B261007A4DD0 /* PasscodeLockStateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DC07D71B90B261007A4DD0 /* PasscodeLockStateType.swift */; settings = {ASSET_TAGS = (); }; };
 		C9DC07DB1B90B730007A4DD0 /* PasscodeLockConfigurationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DC07DA1B90B730007A4DD0 /* PasscodeLockConfigurationType.swift */; settings = {ASSET_TAGS = (); }; };
 		C9DC07DC1B90B730007A4DD0 /* PasscodeLockConfigurationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DC07DA1B90B730007A4DD0 /* PasscodeLockConfigurationType.swift */; settings = {ASSET_TAGS = (); }; };
+		C9DC07DE1B90BA06007A4DD0 /* PasscodeLockType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DC07DD1B90BA06007A4DD0 /* PasscodeLockType.swift */; settings = {ASSET_TAGS = (); }; };
+		C9DC07DF1B90BA06007A4DD0 /* PasscodeLockType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DC07DD1B90BA06007A4DD0 /* PasscodeLockType.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,7 @@
 		C9DC07D41B90B1F6007A4DD0 /* PasscodeRepositoryType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeRepositoryType.swift; sourceTree = "<group>"; };
 		C9DC07D71B90B261007A4DD0 /* PasscodeLockStateType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeLockStateType.swift; sourceTree = "<group>"; };
 		C9DC07DA1B90B730007A4DD0 /* PasscodeLockConfigurationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeLockConfigurationType.swift; sourceTree = "<group>"; };
+		C9DC07DD1B90BA06007A4DD0 /* PasscodeLockType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeLockType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,7 @@
 				C9DC07D41B90B1F6007A4DD0 /* PasscodeRepositoryType.swift */,
 				C9DC07D71B90B261007A4DD0 /* PasscodeLockStateType.swift */,
 				C9DC07DA1B90B730007A4DD0 /* PasscodeLockConfigurationType.swift */,
+				C9DC07DD1B90BA06007A4DD0 /* PasscodeLockType.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -231,6 +235,7 @@
 			files = (
 				C9DC07D81B90B261007A4DD0 /* PasscodeLockStateType.swift in Sources */,
 				C9DC07DB1B90B730007A4DD0 /* PasscodeLockConfigurationType.swift in Sources */,
+				C9DC07DE1B90BA06007A4DD0 /* PasscodeLockType.swift in Sources */,
 				C9DC07D51B90B1F6007A4DD0 /* PasscodeRepositoryType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,6 +246,7 @@
 			files = (
 				C9DC07D91B90B261007A4DD0 /* PasscodeLockStateType.swift in Sources */,
 				C9DC07DC1B90B730007A4DD0 /* PasscodeLockConfigurationType.swift in Sources */,
+				C9DC07DF1B90BA06007A4DD0 /* PasscodeLockType.swift in Sources */,
 				C9DC07D61B90B1F6007A4DD0 /* PasscodeRepositoryType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

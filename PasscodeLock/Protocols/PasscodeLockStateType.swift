@@ -14,4 +14,6 @@ public protocol PasscodeLockStateType {
     var description: String {get}
     var isCancellableAction: Bool {get}
     var isTouchIDAllowed: Bool {get}
+    
+    func acceptPasscode(passcode: [String], fromLock lock: PasscodeLockType)
 }
