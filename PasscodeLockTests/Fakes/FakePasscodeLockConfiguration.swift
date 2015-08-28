@@ -13,7 +13,7 @@ class FakePasscodeLockConfiguration: PasscodeLockConfigurationType {
     let repository: PasscodeRepositoryType
     let passcodeLength = 4
     var isTouchIDAllowed = false
-    let maximumFailedAttempts = 3
+    let maximumInccorectPasscodeAttempts = 3
     let shouldRequestTouchIDImmediately = false
     
     init(repository: PasscodeRepositoryType) {

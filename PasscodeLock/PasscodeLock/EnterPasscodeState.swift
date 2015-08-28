@@ -8,6 +8,8 @@
 
 import Foundation
 
+public let PasscodeLockIncorrectPasscodeNotification = "passcode.lock.incorrect.passcode.notification"
+
 struct EnterPasscodeState: PasscodeLockStateType {
     
     let title: String
@@ -15,13 +17,16 @@ struct EnterPasscodeState: PasscodeLockStateType {
     let isCancellableAction = false
     var isTouchIDAllowed = true
     
+    private var inccorectPasscodeAttempts = 0
+    private var isNotificationSent = false
+    
     init() {
         
         title = localizedStringFor("PasscodeLockEnterTitle", comment: "Enter passcode title")
         description = localizedStringFor("PasscodeLockEnterDescription", comment: "Enter passcode description")
     }
     
-    func acceptPasscode(passcode: [String], fromLock lock: PasscodeLockType) {
+    mutating func acceptPasscode(passcode: [String], fromLock lock: PasscodeLockType) {
         
         guard let currentPasscode = lock.repository.passcode else {
             assertionFailure("There is no saved passcode")
@@ -34,7 +39,25 @@ struct EnterPasscodeState: PasscodeLockStateType {
             
         } else {
             
+            inccorectPasscodeAttempts += 1
+            
+            if inccorectPasscodeAttempts >= lock.configuration.maximumInccorectPasscodeAttempts {
+                
+                postNotification()
+            }
+            
             lock.delegate?.passcodeLockDidFail(lock)
         }
+    }
+    
+    private mutating func postNotification() {
+        
+        guard !isNotificationSent else { return }
+            
+        let center = NSNotificationCenter.defaultCenter()
+        
+        center.postNotificationName(PasscodeLockIncorrectPasscodeNotification, object: nil)
+        
+        isNotificationSent = true
     }
 }

@@ -8,6 +8,25 @@
 
 import XCTest
 
+class NotificaionObserver: NSObject {
+    
+    var called = false
+    var callCounter = 0
+    
+    func observe(notification: String) {
+        
+        let center = NSNotificationCenter.defaultCenter()
+        
+        center.addObserver(self, selector: "handle:", name: notification, object: nil)
+    }
+    
+    func handle(notification: NSNotification) {
+        
+        called = true
+        callCounter += 1
+    }
+}
+
 class EnterPasscodeStateTests: XCTestCase {
     
     var passcodeLock: FakePasscodeLock!
@@ -63,5 +82,35 @@ class EnterPasscodeStateTests: XCTestCase {
         passcodeState.acceptPasscode(["0", "0", "0", "0"], fromLock: passcodeLock)
         
         XCTAssertEqual(delegate.called, true, "Should call the delegate when the passcode is incorrect")
+    }
+    
+    func testIncorrectPasscodeNotification() {
+        
+        let observer = NotificaionObserver()
+        
+        observer.observe(PasscodeLockIncorrectPasscodeNotification)
+        
+        passcodeState.acceptPasscode(["0"], fromLock: passcodeLock)
+        passcodeState.acceptPasscode(["0"], fromLock: passcodeLock)
+        passcodeState.acceptPasscode(["0"], fromLock: passcodeLock)
+        
+        XCTAssertEqual(observer.called, true, "Should send a notificaiton when the maximum number of incorrect attempts is reached")
+    }
+    
+    func testIncorrectPasscodeSendNotificationOnce() {
+        
+        let observer = NotificaionObserver()
+        
+        observer.observe(PasscodeLockIncorrectPasscodeNotification)
+        
+        passcodeState.acceptPasscode(["0"], fromLock: passcodeLock)
+        passcodeState.acceptPasscode(["0"], fromLock: passcodeLock)
+        passcodeState.acceptPasscode(["0"], fromLock: passcodeLock)
+        
+        passcodeState.acceptPasscode(["0"], fromLock: passcodeLock)
+        passcodeState.acceptPasscode(["0"], fromLock: passcodeLock)
+        passcodeState.acceptPasscode(["0"], fromLock: passcodeLock)
+
+        XCTAssertEqual(observer.callCounter, 1, "Should send the notification only once")
     }
 }
