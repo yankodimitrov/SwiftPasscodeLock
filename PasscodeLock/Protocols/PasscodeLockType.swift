@@ -14,11 +14,12 @@ public protocol PasscodeLockType {
     var configuration: PasscodeLockConfigurationType {get}
     var repository: PasscodeRepositoryType {get}
     var state: PasscodeLockStateType {get}
+    var isTouchIDAllowed: Bool {get}
     
     func addSign(sign: String)
     func removeSign()
     func changeStateTo(state: PasscodeLockStateType)
-    func authenticateUsingLocalAuthentication()
+    func authenticateWithBiometrics()
 }
 
 public protocol PasscodeLockTypeDelegate: class {
