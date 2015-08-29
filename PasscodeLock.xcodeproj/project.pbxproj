@@ -10,6 +10,13 @@
 		C99EAF431B90B05700D61E1B /* PasscodeLock.h in Headers */ = {isa = PBXBuildFile; fileRef = C99EAF421B90B05700D61E1B /* PasscodeLock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C99EAF4A1B90B05800D61E1B /* PasscodeLock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99EAF3F1B90B05700D61E1B /* PasscodeLock.framework */; settings = {ASSET_TAGS = (); }; };
 		C9D3DF0B1B919CE4008561EB /* PasscodeLockView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9D3DF0A1B919CE4008561EB /* PasscodeLockView.xib */; settings = {ASSET_TAGS = (); }; };
+		C9D3DF131B91AD11008561EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D3DF121B91AD11008561EB /* AppDelegate.swift */; };
+		C9D3DF151B91AD11008561EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D3DF141B91AD11008561EB /* ViewController.swift */; };
+		C9D3DF181B91AD11008561EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9D3DF161B91AD11008561EB /* Main.storyboard */; };
+		C9D3DF1A1B91AD11008561EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9D3DF191B91AD11008561EB /* Assets.xcassets */; };
+		C9D3DF1D1B91AD11008561EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9D3DF1B1B91AD11008561EB /* LaunchScreen.storyboard */; };
+		C9D3DF3E1B91AD7A008561EB /* PasscodeLock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99EAF3F1B90B05700D61E1B /* PasscodeLock.framework */; };
+		C9D3DF3F1B91AD7A008561EB /* PasscodeLock.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C99EAF3F1B90B05700D61E1B /* PasscodeLock.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C9DC07D51B90B1F6007A4DD0 /* PasscodeRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DC07D41B90B1F6007A4DD0 /* PasscodeRepositoryType.swift */; settings = {ASSET_TAGS = (); }; };
 		C9DC07D61B90B1F6007A4DD0 /* PasscodeRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DC07D41B90B1F6007A4DD0 /* PasscodeRepositoryType.swift */; settings = {ASSET_TAGS = (); }; };
 		C9DC07D81B90B261007A4DD0 /* PasscodeLockStateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DC07D71B90B261007A4DD0 /* PasscodeLockStateType.swift */; settings = {ASSET_TAGS = (); }; };
@@ -56,7 +63,42 @@
 			remoteGlobalIDString = C99EAF3E1B90B05700D61E1B;
 			remoteInfo = PasscodeLock;
 		};
+		C9D3DF241B91AD12008561EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C99EAF361B90B05700D61E1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9D3DF0F1B91AD11008561EB;
+			remoteInfo = PasscodeLockDemo;
+		};
+		C9D3DF2F1B91AD12008561EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C99EAF361B90B05700D61E1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9D3DF0F1B91AD11008561EB;
+			remoteInfo = PasscodeLockDemo;
+		};
+		C9D3DF401B91AD7A008561EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C99EAF361B90B05700D61E1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C99EAF3E1B90B05700D61E1B;
+			remoteInfo = PasscodeLock;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C9D3DF421B91AD7A008561EB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C9D3DF3F1B91AD7A008561EB /* PasscodeLock.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C99EAF3F1B90B05700D61E1B /* PasscodeLock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PasscodeLock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +107,17 @@
 		C99EAF491B90B05800D61E1B /* PasscodeLockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasscodeLockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C99EAF501B90B05800D61E1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9D3DF0A1B919CE4008561EB /* PasscodeLockView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasscodeLockView.xib; sourceTree = "<group>"; };
+		C9D3DF101B91AD11008561EB /* PasscodeLockDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasscodeLockDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9D3DF121B91AD11008561EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C9D3DF141B91AD11008561EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C9D3DF171B91AD11008561EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C9D3DF191B91AD11008561EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C9D3DF1C1B91AD11008561EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C9D3DF1E1B91AD11008561EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9D3DF231B91AD11008561EB /* PasscodeLockDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasscodeLockDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9D3DF291B91AD12008561EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9D3DF2E1B91AD12008561EB /* PasscodeLockDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasscodeLockDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9D3DF341B91AD12008561EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9DC07CE1B90B0AC007A4DD0 /* PasscodeLockTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PasscodeLockTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		C9DC07D41B90B1F6007A4DD0 /* PasscodeRepositoryType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeRepositoryType.swift; sourceTree = "<group>"; };
 		C9DC07D71B90B261007A4DD0 /* PasscodeLockStateType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeLockStateType.swift; sourceTree = "<group>"; };
@@ -110,6 +163,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C9D3DF0D1B91AD11008561EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9D3DF3E1B91AD7A008561EB /* PasscodeLock.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9D3DF201B91AD11008561EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9D3DF2B1B91AD12008561EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -118,6 +193,9 @@
 			children = (
 				C99EAF411B90B05700D61E1B /* PasscodeLock */,
 				C99EAF4D1B90B05800D61E1B /* PasscodeLockTests */,
+				C9D3DF111B91AD11008561EB /* PasscodeLockDemo */,
+				C9D3DF261B91AD12008561EB /* PasscodeLockDemoTests */,
+				C9D3DF311B91AD12008561EB /* PasscodeLockDemoUITests */,
 				C99EAF401B90B05700D61E1B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -127,6 +205,9 @@
 			children = (
 				C99EAF3F1B90B05700D61E1B /* PasscodeLock.framework */,
 				C99EAF491B90B05800D61E1B /* PasscodeLockTests.xctest */,
+				C9D3DF101B91AD11008561EB /* PasscodeLockDemo.app */,
+				C9D3DF231B91AD11008561EB /* PasscodeLockDemoTests.xctest */,
+				C9D3DF2E1B91AD12008561EB /* PasscodeLockDemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,6 +237,35 @@
 				C9DC07CE1B90B0AC007A4DD0 /* PasscodeLockTests-Bridging-Header.h */,
 			);
 			path = PasscodeLockTests;
+			sourceTree = "<group>";
+		};
+		C9D3DF111B91AD11008561EB /* PasscodeLockDemo */ = {
+			isa = PBXGroup;
+			children = (
+				C9D3DF121B91AD11008561EB /* AppDelegate.swift */,
+				C9D3DF141B91AD11008561EB /* ViewController.swift */,
+				C9D3DF161B91AD11008561EB /* Main.storyboard */,
+				C9D3DF191B91AD11008561EB /* Assets.xcassets */,
+				C9D3DF1B1B91AD11008561EB /* LaunchScreen.storyboard */,
+				C9D3DF1E1B91AD11008561EB /* Info.plist */,
+			);
+			path = PasscodeLockDemo;
+			sourceTree = "<group>";
+		};
+		C9D3DF261B91AD12008561EB /* PasscodeLockDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				C9D3DF291B91AD12008561EB /* Info.plist */,
+			);
+			path = PasscodeLockDemoTests;
+			sourceTree = "<group>";
+		};
+		C9D3DF311B91AD12008561EB /* PasscodeLockDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C9D3DF341B91AD12008561EB /* Info.plist */,
+			);
+			path = PasscodeLockDemoUITests;
 			sourceTree = "<group>";
 		};
 		C9DC07D11B90B1CE007A4DD0 /* PasscodeLock */ = {
@@ -265,6 +375,61 @@
 			productReference = C99EAF491B90B05800D61E1B /* PasscodeLockTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		C9D3DF0F1B91AD11008561EB /* PasscodeLockDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9D3DF351B91AD12008561EB /* Build configuration list for PBXNativeTarget "PasscodeLockDemo" */;
+			buildPhases = (
+				C9D3DF0C1B91AD11008561EB /* Sources */,
+				C9D3DF0D1B91AD11008561EB /* Frameworks */,
+				C9D3DF0E1B91AD11008561EB /* Resources */,
+				C9D3DF421B91AD7A008561EB /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9D3DF411B91AD7A008561EB /* PBXTargetDependency */,
+			);
+			name = PasscodeLockDemo;
+			productName = PasscodeLockDemo;
+			productReference = C9D3DF101B91AD11008561EB /* PasscodeLockDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C9D3DF221B91AD11008561EB /* PasscodeLockDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9D3DF381B91AD12008561EB /* Build configuration list for PBXNativeTarget "PasscodeLockDemoTests" */;
+			buildPhases = (
+				C9D3DF1F1B91AD11008561EB /* Sources */,
+				C9D3DF201B91AD11008561EB /* Frameworks */,
+				C9D3DF211B91AD11008561EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9D3DF251B91AD12008561EB /* PBXTargetDependency */,
+			);
+			name = PasscodeLockDemoTests;
+			productName = PasscodeLockDemoTests;
+			productReference = C9D3DF231B91AD11008561EB /* PasscodeLockDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C9D3DF2D1B91AD12008561EB /* PasscodeLockDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9D3DF3B1B91AD12008561EB /* Build configuration list for PBXNativeTarget "PasscodeLockDemoUITests" */;
+			buildPhases = (
+				C9D3DF2A1B91AD12008561EB /* Sources */,
+				C9D3DF2B1B91AD12008561EB /* Frameworks */,
+				C9D3DF2C1B91AD12008561EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9D3DF301B91AD12008561EB /* PBXTargetDependency */,
+			);
+			name = PasscodeLockDemoUITests;
+			productName = PasscodeLockDemoUITests;
+			productReference = C9D3DF2E1B91AD12008561EB /* PasscodeLockDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -281,6 +446,17 @@
 					C99EAF481B90B05700D61E1B = {
 						CreatedOnToolsVersion = 7.0;
 					};
+					C9D3DF0F1B91AD11008561EB = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					C9D3DF221B91AD11008561EB = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = C9D3DF0F1B91AD11008561EB;
+					};
+					C9D3DF2D1B91AD12008561EB = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = C9D3DF0F1B91AD11008561EB;
+					};
 				};
 			};
 			buildConfigurationList = C99EAF391B90B05700D61E1B /* Build configuration list for PBXProject "PasscodeLock" */;
@@ -289,6 +465,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = C99EAF351B90B05700D61E1B;
 			productRefGroup = C99EAF401B90B05700D61E1B /* Products */;
@@ -297,6 +474,9 @@
 			targets = (
 				C99EAF3E1B90B05700D61E1B /* PasscodeLock */,
 				C99EAF481B90B05700D61E1B /* PasscodeLockTests */,
+				C9D3DF0F1B91AD11008561EB /* PasscodeLockDemo */,
+				C9D3DF221B91AD11008561EB /* PasscodeLockDemoTests */,
+				C9D3DF2D1B91AD12008561EB /* PasscodeLockDemoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -316,6 +496,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9DC07FD1B90D0A3007A4DD0 /* PasscodeLock.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9D3DF0E1B91AD11008561EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9D3DF1D1B91AD11008561EB /* LaunchScreen.storyboard in Resources */,
+				C9D3DF1A1B91AD11008561EB /* Assets.xcassets in Resources */,
+				C9D3DF181B91AD11008561EB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9D3DF211B91AD11008561EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9D3DF2C1B91AD12008561EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +573,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C9D3DF0C1B91AD11008561EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9D3DF151B91AD11008561EB /* ViewController.swift in Sources */,
+				C9D3DF131B91AD11008561EB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9D3DF1F1B91AD11008561EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9D3DF2A1B91AD12008561EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -377,9 +604,40 @@
 			target = C99EAF3E1B90B05700D61E1B /* PasscodeLock */;
 			targetProxy = C99EAF4B1B90B05800D61E1B /* PBXContainerItemProxy */;
 		};
+		C9D3DF251B91AD12008561EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9D3DF0F1B91AD11008561EB /* PasscodeLockDemo */;
+			targetProxy = C9D3DF241B91AD12008561EB /* PBXContainerItemProxy */;
+		};
+		C9D3DF301B91AD12008561EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9D3DF0F1B91AD11008561EB /* PasscodeLockDemo */;
+			targetProxy = C9D3DF2F1B91AD12008561EB /* PBXContainerItemProxy */;
+		};
+		C9D3DF411B91AD7A008561EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C99EAF3E1B90B05700D61E1B /* PasscodeLock */;
+			targetProxy = C9D3DF401B91AD7A008561EB /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		C9D3DF161B91AD11008561EB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9D3DF171B91AD11008561EB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C9D3DF1B1B91AD11008561EB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9D3DF1C1B91AD11008561EB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		C9DC07FA1B90D0A3007A4DD0 /* PasscodeLock.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -540,6 +798,86 @@
 			};
 			name = Release;
 		};
+		C9D3DF361B91AD12008561EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = PasscodeLockDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yankodimitrov.PasscodeLockDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C9D3DF371B91AD12008561EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = PasscodeLockDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yankodimitrov.PasscodeLockDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C9D3DF391B91AD12008561EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PasscodeLockDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yankodimitrov.PasscodeLockDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PasscodeLockDemo.app/PasscodeLockDemo";
+			};
+			name = Debug;
+		};
+		C9D3DF3A1B91AD12008561EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PasscodeLockDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yankodimitrov.PasscodeLockDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PasscodeLockDemo.app/PasscodeLockDemo";
+			};
+			name = Release;
+		};
+		C9D3DF3C1B91AD12008561EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PasscodeLockDemoUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yankodimitrov.PasscodeLockDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PasscodeLockDemo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		C9D3DF3D1B91AD12008561EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PasscodeLockDemoUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yankodimitrov.PasscodeLockDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PasscodeLockDemo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -569,6 +907,30 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		C9D3DF351B91AD12008561EB /* Build configuration list for PBXNativeTarget "PasscodeLockDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9D3DF361B91AD12008561EB /* Debug */,
+				C9D3DF371B91AD12008561EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C9D3DF381B91AD12008561EB /* Build configuration list for PBXNativeTarget "PasscodeLockDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9D3DF391B91AD12008561EB /* Debug */,
+				C9D3DF3A1B91AD12008561EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C9D3DF3B1B91AD12008561EB /* Build configuration list for PBXNativeTarget "PasscodeLockDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9D3DF3C1B91AD12008561EB /* Debug */,
+				C9D3DF3D1B91AD12008561EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

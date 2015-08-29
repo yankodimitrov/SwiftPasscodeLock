@@ -76,7 +76,7 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
         
         titleLabel.text = passcodeLock.state.title
         descriptionLabel.text = passcodeLock.state.description
-        touchIDButton.enabled = passcodeLock.isTouchIDAllowed
+        touchIDButton.hidden = passcodeLock.isTouchIDAllowed
     }
     
     // MARK: - Actions
