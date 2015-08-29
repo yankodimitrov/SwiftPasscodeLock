@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C99EAF431B90B05700D61E1B /* PasscodeLock.h in Headers */ = {isa = PBXBuildFile; fileRef = C99EAF421B90B05700D61E1B /* PasscodeLock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C99EAF4A1B90B05800D61E1B /* PasscodeLock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99EAF3F1B90B05700D61E1B /* PasscodeLock.framework */; settings = {ASSET_TAGS = (); }; };
+		C9D3DF0B1B919CE4008561EB /* PasscodeLockView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9D3DF0A1B919CE4008561EB /* PasscodeLockView.xib */; settings = {ASSET_TAGS = (); }; };
 		C9DC07D51B90B1F6007A4DD0 /* PasscodeRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DC07D41B90B1F6007A4DD0 /* PasscodeRepositoryType.swift */; settings = {ASSET_TAGS = (); }; };
 		C9DC07D61B90B1F6007A4DD0 /* PasscodeRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DC07D41B90B1F6007A4DD0 /* PasscodeRepositoryType.swift */; settings = {ASSET_TAGS = (); }; };
 		C9DC07D81B90B261007A4DD0 /* PasscodeLockStateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DC07D71B90B261007A4DD0 /* PasscodeLockStateType.swift */; settings = {ASSET_TAGS = (); }; };
@@ -63,6 +64,7 @@
 		C99EAF441B90B05700D61E1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C99EAF491B90B05800D61E1B /* PasscodeLockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasscodeLockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C99EAF501B90B05800D61E1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9D3DF0A1B919CE4008561EB /* PasscodeLockView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasscodeLockView.xib; sourceTree = "<group>"; };
 		C9DC07CE1B90B0AC007A4DD0 /* PasscodeLockTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PasscodeLockTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		C9DC07D41B90B1F6007A4DD0 /* PasscodeRepositoryType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeRepositoryType.swift; sourceTree = "<group>"; };
 		C9DC07D71B90B261007A4DD0 /* PasscodeLockStateType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeLockStateType.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 			children = (
 				C9DC08111B90DE1B007A4DD0 /* PasscodeSignPlaceholderView.swift */,
 				C9DC08131B90DE50007A4DD0 /* PasscodeSignButton.swift */,
+				C9D3DF0A1B919CE4008561EB /* PasscodeLockView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9DC07FC1B90D0A3007A4DD0 /* PasscodeLock.strings in Resources */,
+				C9D3DF0B1B919CE4008561EB /* PasscodeLockView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

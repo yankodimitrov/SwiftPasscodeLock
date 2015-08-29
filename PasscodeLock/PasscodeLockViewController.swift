@@ -79,7 +79,7 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
     
     // MARK: - Actions
     
-    @IBAction func passcodeButtonTap(sender: PasscodeSignButton) {
+    @IBAction func passcodeSignButtonTap(sender: PasscodeSignButton) {
         
         guard isPlaceholdersAnimationCompleted else { return }
         
