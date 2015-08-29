@@ -88,19 +88,24 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
     
     @IBAction func cancelButtonTap(sender: UIButton) {
         
-        if navigationController != nil {
-            
-            navigationController?.popViewControllerAnimated(true)
-            
-        } else {
-            
-            dismissViewControllerAnimated(true, completion: nil)
-        }
+        dismissPasscodeLock()
     }
     
     @IBAction func deleteSignButtonTap(sender: UIButton) {
         
         passcodeLock.removeSign()
+    }
+    
+    internal func dismissPasscodeLock() {
+    
+        if navigationController != nil {
+        
+            navigationController?.popViewControllerAnimated(true)
+        
+        } else {
+        
+            dismissViewControllerAnimated(true, completion: nil)
+        }
     }
     
     // MARK: - Animations
@@ -152,7 +157,7 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
     
     public func passcodeLockDidSucceed(lock: PasscodeLockType) {
         
-        dismissViewControllerAnimated(true, completion: nil)
+        dismissPasscodeLock()
     }
     
     public func passcodeLockDidFail(lock: PasscodeLockType) {
