@@ -30,7 +30,7 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
     @IBOutlet public var placeholders: [PasscodeSignPlaceholderView] = [PasscodeSignPlaceholderView]()
     @IBOutlet public weak var cancelButton: UIButton!
     @IBOutlet public weak var deleteSignButton: UIButton!
-    @IBOutlet weak var touchIDButton: UIButton!
+    @IBOutlet public weak var touchIDButton: UIButton!
     @IBOutlet public weak var placeholdersX: NSLayoutConstraint!
     
     internal let passcodeConfiguration: PasscodeLockConfigurationType
