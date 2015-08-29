@@ -12,11 +12,11 @@
 
 /* Set Passcode State */
 "PasscodeLockSetTitle" = "Enter a Passcode";
-"PasscodeLockSetDescription" = "Type your passcode.";
+"PasscodeLockSetDescription" = "Choose your passcode.";
 
 /* Confirm Passcode State */
 "PasscodeLockConfirmTitle" = "Confirm Passcode";
-"PasscodeLockConfirmDescription" = "Type the passcode again.";
+"PasscodeLockConfirmDescription" = "Enter the passcode again.";
 
 /* Change Passcode State */
 "PasscodeLockChangeTitle" = "Enter Old Passcode";
@@ -24,7 +24,7 @@
 
 /* Passcode Mismatch State */
 "PasscodeLockMismatchTitle" = "Try again";
-"PasscodeLockMismatchDescription" = "Passcodes didn\'t match. Try again.";
+"PasscodeLockMismatchDescription" = "Passcodes didn\'t match.";
 
 /* Touch ID Reason */
 "PasscodeLockTouchIDReason" = "Authentication required to proceed";
