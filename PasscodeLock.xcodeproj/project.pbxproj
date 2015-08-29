@@ -11,7 +11,7 @@
 		C99EAF4A1B90B05800D61E1B /* PasscodeLock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99EAF3F1B90B05700D61E1B /* PasscodeLock.framework */; settings = {ASSET_TAGS = (); }; };
 		C9D3DF0B1B919CE4008561EB /* PasscodeLockView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9D3DF0A1B919CE4008561EB /* PasscodeLockView.xib */; settings = {ASSET_TAGS = (); }; };
 		C9D3DF131B91AD11008561EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D3DF121B91AD11008561EB /* AppDelegate.swift */; };
-		C9D3DF151B91AD11008561EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D3DF141B91AD11008561EB /* ViewController.swift */; };
+		C9D3DF151B91AD11008561EB /* PasscodeSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D3DF141B91AD11008561EB /* PasscodeSettingsViewController.swift */; };
 		C9D3DF181B91AD11008561EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9D3DF161B91AD11008561EB /* Main.storyboard */; };
 		C9D3DF1A1B91AD11008561EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9D3DF191B91AD11008561EB /* Assets.xcassets */; };
 		C9D3DF1D1B91AD11008561EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9D3DF1B1B91AD11008561EB /* LaunchScreen.storyboard */; };
@@ -111,7 +111,7 @@
 		C9D3DF0A1B919CE4008561EB /* PasscodeLockView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasscodeLockView.xib; sourceTree = "<group>"; };
 		C9D3DF101B91AD11008561EB /* PasscodeLockDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasscodeLockDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9D3DF121B91AD11008561EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C9D3DF141B91AD11008561EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C9D3DF141B91AD11008561EB /* PasscodeSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeSettingsViewController.swift; sourceTree = "<group>"; };
 		C9D3DF171B91AD11008561EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C9D3DF191B91AD11008561EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9D3DF1C1B91AD11008561EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -247,7 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				C9D3DF121B91AD11008561EB /* AppDelegate.swift */,
-				C9D3DF141B91AD11008561EB /* ViewController.swift */,
+				C9D3DF141B91AD11008561EB /* PasscodeSettingsViewController.swift */,
 				C9D3DF161B91AD11008561EB /* Main.storyboard */,
 				C9D3DF191B91AD11008561EB /* Assets.xcassets */,
 				C9D3DF1B1B91AD11008561EB /* LaunchScreen.storyboard */,
@@ -585,7 +585,7 @@
 			files = (
 				C9D3DF441B91B9CD008561EB /* UserDefaultsPasscodeRepository.swift in Sources */,
 				C9D3DF461B91BD0E008561EB /* PasscodeLockConfiguration.swift in Sources */,
-				C9D3DF151B91AD11008561EB /* ViewController.swift in Sources */,
+				C9D3DF151B91AD11008561EB /* PasscodeSettingsViewController.swift in Sources */,
 				C9D3DF131B91AD11008561EB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
