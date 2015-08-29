@@ -12,7 +12,7 @@ struct ConfirmPasscodeState: PasscodeLockStateType {
     
     let title: String
     let description: String
-    let isCancellableAction = false
+    let isCancellableAction = true
     var isTouchIDAllowed = false
     
     private var passcodeToConfirm: [String]
@@ -33,7 +33,10 @@ struct ConfirmPasscodeState: PasscodeLockStateType {
         
         } else {
             
-            let nextState = SetPasscodeState()
+            let mismatchTitle = localizedStringFor("PasscodeLockMismatchTitle", comment: "Passcode mismatch title")
+            let mismatchDescription = localizedStringFor("PasscodeLockMismatchDescription", comment: "Passcode mismatch description")
+            
+            let nextState = SetPasscodeState(title: mismatchTitle, description: mismatchDescription)
             
             lock.changeStateTo(nextState)
             lock.delegate?.passcodeLockDidFail(lock)
