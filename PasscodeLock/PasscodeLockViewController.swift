@@ -33,6 +33,8 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
     @IBOutlet public weak var touchIDButton: UIButton!
     @IBOutlet public weak var placeholdersX: NSLayoutConstraint!
     
+    public var successCallback: ((lock: PasscodeLockType) -> Void)?
+    
     internal let passcodeConfiguration: PasscodeLockConfigurationType
     internal let passcodeLock: PasscodeLockType
     internal var isPlaceholdersAnimationCompleted = true
@@ -164,6 +166,7 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
     
     public func passcodeLockDidSucceed(lock: PasscodeLockType) {
         
+        successCallback?(lock: lock)
         dismissPasscodeLock()
     }
     
