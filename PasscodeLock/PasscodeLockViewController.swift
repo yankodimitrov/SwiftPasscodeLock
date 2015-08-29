@@ -30,6 +30,7 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
     @IBOutlet public var placeholders: [PasscodeSignPlaceholderView] = [PasscodeSignPlaceholderView]()
     @IBOutlet public weak var cancelButton: UIButton!
     @IBOutlet public weak var deleteSignButton: UIButton!
+    @IBOutlet weak var touchIDButton: UIButton!
     @IBOutlet public weak var placeholdersX: NSLayoutConstraint!
     
     internal let passcodeConfiguration: PasscodeLockConfigurationType
@@ -75,6 +76,7 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
         
         titleLabel.text = passcodeLock.state.title
         descriptionLabel.text = passcodeLock.state.description
+        touchIDButton.enabled = passcodeLock.isTouchIDAllowed
     }
     
     // MARK: - Actions
@@ -94,6 +96,11 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
     @IBAction func deleteSignButtonTap(sender: UIButton) {
         
         passcodeLock.removeSign()
+    }
+    
+    @IBAction func touchIDButtonTap(sender: UIButton) {
+        
+        passcodeLock.authenticateWithBiometrics()
     }
     
     internal func dismissPasscodeLock() {

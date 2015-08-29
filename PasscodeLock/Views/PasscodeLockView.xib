@@ -12,6 +12,7 @@
                 <outlet property="descriptionLabel" destination="HbT-GO-CPk" id="gtS-ky-zzI"/>
                 <outlet property="placeholdersX" destination="Wqo-IM-yCU" id="8td-lh-XMA"/>
                 <outlet property="titleLabel" destination="1wK-Ol-7mm" id="FOM-sv-dOO"/>
+                <outlet property="touchIDButton" destination="0Ph-dj-v7R" id="ifL-gW-Ttr"/>
                 <outlet property="view" destination="iN0-l3-epB" id="4dc-hJ-geg"/>
                 <outletCollection property="placeholders" destination="w14-Kb-Jnf" collectionClass="NSMutableArray" id="OYC-Bu-Hqb"/>
                 <outletCollection property="placeholders" destination="OSf-H5-f20" collectionClass="NSMutableArray" id="obm-Mr-bfV"/>
@@ -384,6 +385,16 @@
                         <action selector="deleteSignButtonTap:" destination="-1" eventType="touchUpInside" id="uXY-lj-GdX"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ph-dj-v7R" userLabel="TouchID Button">
+                    <rect key="frame" x="252" y="558" width="96" height="26"/>
+                    <inset key="contentEdgeInsets" minX="4" minY="4" maxX="4" maxY="4"/>
+                    <state key="normal" title="Use TouchID">
+                        <color key="titleColor" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="touchIDButtonTap:" destination="-1" eventType="touchUpInside" id="MT9-Ev-GsW"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -393,6 +404,7 @@
                 <constraint firstItem="C9Z-3u-ohd" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="4dI-MF-FB1"/>
                 <constraint firstItem="pLy-90-g1a" firstAttribute="leading" secondItem="CGh-ph-49t" secondAttribute="trailing" constant="10" id="6jk-5n-EC0"/>
                 <constraint firstItem="cuq-ue-Jyj" firstAttribute="trailing" secondItem="CGh-ph-49t" secondAttribute="leading" constant="-10" id="6wf-5d-CCI"/>
+                <constraint firstItem="0Ph-dj-v7R" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" constant="-16" id="BIJ-v9-DKU"/>
                 <constraint firstItem="RR4-5o-pli" firstAttribute="centerX" secondItem="cuq-ue-Jyj" secondAttribute="centerX" id="EsN-cG-KcQ"/>
                 <constraint firstItem="1wK-Ol-7mm" firstAttribute="bottom" secondItem="HbT-GO-CPk" secondAttribute="top" constant="-6" id="F4T-j8-jQJ"/>
                 <constraint firstItem="HbT-GO-CPk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="FUQ-Nh-ox9"/>
@@ -414,6 +426,7 @@
                 <constraint firstItem="HbT-GO-CPk" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="trailing" constant="16" id="bR1-VP-TdA"/>
                 <constraint firstItem="EUD-XB-0CR" firstAttribute="centerX" secondItem="WDx-aD-wJK" secondAttribute="centerX" id="bc8-gr-atX"/>
                 <constraint firstItem="CGh-ph-49t" firstAttribute="bottom" secondItem="C9Z-3u-ohd" secondAttribute="top" constant="-10" id="diZ-Kj-1hU"/>
+                <constraint firstItem="0Ph-dj-v7R" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="i6j-iI-02e"/>
                 <constraint firstItem="RA8-jd-dag" firstAttribute="centerX" secondItem="RR4-5o-pli" secondAttribute="centerX" id="inw-ZS-osP"/>
                 <constraint firstItem="C9Z-3u-ohd" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="20" id="luj-6S-dgY"/>
                 <constraint firstItem="RA8-jd-dag" firstAttribute="top" secondItem="RR4-5o-pli" secondAttribute="bottom" constant="10" id="mfW-ld-bDO"/>
