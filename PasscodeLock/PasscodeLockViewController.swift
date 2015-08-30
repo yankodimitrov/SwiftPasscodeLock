@@ -14,6 +14,7 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
         case EnterPasscode
         case SetPasscode
         case ChangePasscode
+        case RemovePasscode
         
         func getState() -> PasscodeLockStateType {
             
@@ -21,6 +22,7 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
             case .EnterPasscode: return EnterPasscodeState()
             case .SetPasscode: return SetPasscodeState()
             case .ChangePasscode: return ChangePasscodeState()
+            case .RemovePasscode: return EnterPasscodeState(allowCancellation: true)
             }
         }
     }
@@ -124,7 +126,6 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
             dismissViewControllerAnimated(true, completion: dismissCompletionCallback)
         }
         
-        successCallback?(lock: lock)
     }
     
     // MARK: - Animations
@@ -179,6 +180,7 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
         deleteSignButton.enabled = true
         animatePlaceholders(placeholders, toState: .Inactive)
         dismissPasscodeLock(lock)
+        successCallback?(lock: lock)
     }
     
     public func passcodeLockDidFail(lock: PasscodeLockType) {

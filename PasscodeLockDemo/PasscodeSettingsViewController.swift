@@ -61,7 +61,7 @@ class PasscodeSettingsViewController: UIViewController {
             
         } else {
             
-            passcodeVC = PasscodeLockViewController(state: .EnterPasscode, configuration: configuration)
+            passcodeVC = PasscodeLockViewController(state: .RemovePasscode, configuration: configuration)
             
             passcodeVC.successCallback = { lock in
                 
