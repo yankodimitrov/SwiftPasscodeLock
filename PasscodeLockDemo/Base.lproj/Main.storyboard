@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+    </dependencies>
+    <scenes>
+        <!--Passcode Settings View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PasscodeSettingsViewController" customModule="PasscodeLockDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Passcode:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNW-hY-03M">
+                                <rect key="frame" x="231" y="178" width="79" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mm8-A7-rJo">
+                                <rect key="frame" x="320" y="173" width="51" height="31"/>
+                                <connections>
+                                    <action selector="passcodeSwitchValueChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="jNq-f0-MQm"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hX3-sK-N1u">
+                                <rect key="frame" x="238" y="224" width="124" height="30"/>
+                                <state key="normal" title="Change Passcode"/>
+                                <connections>
+                                    <action selector="changePasscodeButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NuA-mw-aCy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sQ-Ot-x0k">
+                                <rect key="frame" x="239" y="28" width="123" height="30"/>
+                                <state key="normal" title="Test with Alert VC"/>
+                                <connections>
+                                    <action selector="testAlertButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="krs-eb-ebn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWy-5L-Ls0">
+                                <rect key="frame" x="230" y="68" width="141" height="30"/>
+                                <state key="normal" title="Test with Activity VC"/>
+                                <connections>
+                                    <action selector="testActivityButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2ep-zy-BSy"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Test with Keyboard" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rmd-tl-sFf">
+                                <rect key="frame" x="200" y="118" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2f1-0e-7l4"/>
+                                    <constraint firstAttribute="width" constant="200" id="ObS-uG-Gt6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="xNW-hY-03M" firstAttribute="top" secondItem="rmd-tl-sFf" secondAttribute="bottom" constant="30" id="2zO-aG-LMc"/>
+                            <constraint firstItem="hX3-sK-N1u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GYG-DV-tuh"/>
+                            <constraint firstItem="FWy-5L-Ls0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GgD-cf-VKL"/>
+                            <constraint firstItem="0sQ-Ot-x0k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lnz-UM-hdk"/>
+                            <constraint firstItem="rmd-tl-sFf" firstAttribute="top" secondItem="FWy-5L-Ls0" secondAttribute="bottom" constant="20" id="Q1Z-1n-y86"/>
+                            <constraint firstItem="xNW-hY-03M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-30" id="S6v-lm-4Ph"/>
+                            <constraint firstItem="rmd-tl-sFf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d3e-lg-VyU"/>
+                            <constraint firstItem="FWy-5L-Ls0" firstAttribute="top" secondItem="0sQ-Ot-x0k" secondAttribute="bottom" constant="10" id="dXe-7d-aSS"/>
+                            <constraint firstItem="hX3-sK-N1u" firstAttribute="top" secondItem="mm8-A7-rJo" secondAttribute="bottom" constant="20" id="gzu-mf-ese"/>
+                            <constraint firstItem="0sQ-Ot-x0k" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="l3Q-sY-BMc"/>
+                            <constraint firstItem="mm8-A7-rJo" firstAttribute="leading" secondItem="xNW-hY-03M" secondAttribute="trailing" constant="10" id="si3-7E-qvZ"/>
+                            <constraint firstItem="mm8-A7-rJo" firstAttribute="centerY" secondItem="xNW-hY-03M" secondAttribute="centerY" id="v3E-OS-UMD"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="dBo-hj-U7j" appends="YES" id="Oba-dl-fz8"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="changePasscodeButton" destination="hX3-sK-N1u" id="rtE-Zz-bzt"/>
+                        <outlet property="passcodeSwitch" destination="mm8-A7-rJo" id="Kgs-Jx-95y"/>
+                        <outlet property="testActivityButton" destination="FWy-5L-Ls0" id="Soc-aP-qmt"/>
+                        <outlet property="testTextField" destination="rmd-tl-sFf" id="CaG-9B-2Q4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="dBo-hj-U7j">
+                    <connections>
+                        <action selector="dismissKeyboard" destination="BYZ-38-t0r" id="pt7-Om-ze7"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="214" y="451"/>
+        </scene>
+    </scenes>
+</document>
