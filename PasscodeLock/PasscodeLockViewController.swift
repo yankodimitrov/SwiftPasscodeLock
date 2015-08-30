@@ -40,10 +40,10 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
     internal let passcodeLock: PasscodeLockType
     internal var isPlaceholdersAnimationCompleted = true
     
-    public init(state: LockState, configuration: PasscodeLockConfigurationType) {
+    public init(state: PasscodeLockStateType, configuration: PasscodeLockConfigurationType) {
         
         passcodeConfiguration = configuration
-        passcodeLock = PasscodeLock(state: state.getState(), configuration: configuration)
+        passcodeLock = PasscodeLock(state: state, configuration: configuration)
         
         let nibName = "PasscodeLockView"
         let bundle: NSBundle = bundleForResource(nibName, ofType: "nib")
@@ -51,6 +51,11 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
         super.init(nibName: nibName, bundle: bundle)
         
         passcodeLock.delegate = self
+    }
+    
+    public convenience init(state: LockState, configuration: PasscodeLockConfigurationType) {
+        
+        self.init(state: state.getState(), configuration: configuration)
     }
     
     public required init(coder aDecoder: NSCoder) {
