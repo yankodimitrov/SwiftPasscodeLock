@@ -34,15 +34,16 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
     @IBOutlet public weak var placeholdersX: NSLayoutConstraint!
     
     public var successCallback: ((lock: PasscodeLockType) -> Void)?
+    public var dismissCompletionCallback: (()->Void)?
     
     internal let passcodeConfiguration: PasscodeLockConfigurationType
     internal let passcodeLock: PasscodeLockType
     internal var isPlaceholdersAnimationCompleted = true
     
-    public init(lockState: LockState, configuration: PasscodeLockConfigurationType) {
+    public init(state: LockState, configuration: PasscodeLockConfigurationType) {
         
         passcodeConfiguration = configuration
-        passcodeLock = PasscodeLock(state: lockState.getState(), configuration: configuration)
+        passcodeLock = PasscodeLock(state: state.getState(), configuration: configuration)
         
         let nibName = "PasscodeLockView"
         let bundle: NSBundle = bundleForResource(nibName, ofType: "nib")
@@ -93,7 +94,7 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
     
     @IBAction func cancelButtonTap(sender: UIButton) {
         
-        dismissPasscodeLock()
+        dismissPasscodeLock(passcodeLock)
     }
     
     @IBAction func deleteSignButtonTap(sender: UIButton) {
@@ -106,16 +107,19 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
         passcodeLock.authenticateWithBiometrics()
     }
     
-    internal func dismissPasscodeLock() {
+    internal func dismissPasscodeLock(lock: PasscodeLockType) {
     
         if navigationController != nil {
         
             navigationController?.popViewControllerAnimated(true)
-        
+            dismissCompletionCallback?()
+            
         } else {
         
-            dismissViewControllerAnimated(true, completion: nil)
+            dismissViewControllerAnimated(true, completion: dismissCompletionCallback)
         }
+        
+        successCallback?(lock: lock)
     }
     
     // MARK: - Animations
@@ -167,8 +171,9 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
     
     public func passcodeLockDidSucceed(lock: PasscodeLockType) {
         
-        successCallback?(lock: lock)
-        dismissPasscodeLock()
+        deleteSignButton.enabled = true
+        animatePlaceholders(placeholders, toState: .Inactive)
+        dismissPasscodeLock(lock)
     }
     
     public func passcodeLockDidFail(lock: PasscodeLockType) {
