@@ -18,19 +18,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Passcode:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNW-hY-03M">
-                                <rect key="frame" x="231" y="190" width="79" height="21"/>
+                                <rect key="frame" x="231" y="178" width="79" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mm8-A7-rJo">
-                                <rect key="frame" x="320" y="185" width="51" height="31"/>
+                                <rect key="frame" x="320" y="173" width="51" height="31"/>
                                 <connections>
                                     <action selector="passcodeSwitchValueChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="jNq-f0-MQm"/>
                                 </connections>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hX3-sK-N1u">
-                                <rect key="frame" x="238" y="236" width="124" height="30"/>
+                                <rect key="frame" x="238" y="224" width="124" height="30"/>
                                 <state key="normal" title="Change Passcode"/>
                                 <connections>
                                     <action selector="changePasscodeButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NuA-mw-aCy"/>
@@ -63,12 +63,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="xNW-hY-03M" firstAttribute="top" secondItem="rmd-tl-sFf" secondAttribute="bottom" constant="30" id="2zO-aG-LMc"/>
                             <constraint firstItem="hX3-sK-N1u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GYG-DV-tuh"/>
                             <constraint firstItem="FWy-5L-Ls0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GgD-cf-VKL"/>
                             <constraint firstItem="0sQ-Ot-x0k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lnz-UM-hdk"/>
                             <constraint firstItem="rmd-tl-sFf" firstAttribute="top" secondItem="FWy-5L-Ls0" secondAttribute="bottom" constant="20" id="Q1Z-1n-y86"/>
                             <constraint firstItem="xNW-hY-03M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-30" id="S6v-lm-4Ph"/>
-                            <constraint firstItem="xNW-hY-03M" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="d0F-TY-JeI"/>
                             <constraint firstItem="rmd-tl-sFf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d3e-lg-VyU"/>
                             <constraint firstItem="FWy-5L-Ls0" firstAttribute="top" secondItem="0sQ-Ot-x0k" secondAttribute="bottom" constant="10" id="dXe-7d-aSS"/>
                             <constraint firstItem="hX3-sK-N1u" firstAttribute="top" secondItem="mm8-A7-rJo" secondAttribute="bottom" constant="20" id="gzu-mf-ese"/>
