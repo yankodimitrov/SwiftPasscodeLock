@@ -18,7 +18,6 @@ public class PasscodeLockPresenter {
         
         window.windowLevel = 0
         window.makeKeyAndVisible()
-        window.rootViewController = UIViewController()
         
         return window
     }()
@@ -29,7 +28,7 @@ public class PasscodeLockPresenter {
     public init(mainWindow window: UIWindow?, configuration: PasscodeLockConfigurationType) {
         
         mainWindow = window
-        mainWindow?.windowLevel = 1
+        mainWindow?.windowLevel = UIWindowLevelNormal
         passcodeConfiguration = configuration
     }
     
@@ -39,7 +38,7 @@ public class PasscodeLockPresenter {
         guard !isPasscodePresented else { return }
         
         isPasscodePresented = true
-        passcodeLockWindow.windowLevel = 2
+		passcodeLockWindow.windowLevel = UIWindowLevelAlert
         
         let passcodeLockVC = PasscodeLockViewController(state: .EnterPasscode, configuration: passcodeConfiguration)
         
@@ -48,7 +47,7 @@ public class PasscodeLockPresenter {
             self?.dismissPasscodeLock()
         }
         
-        passcodeLockWindow.rootViewController?.presentViewController(passcodeLockVC, animated: false, completion: nil)
+        passcodeLockWindow.rootViewController = passcodeLockVC
     }
     
     private func dismissPasscodeLock() {
@@ -57,7 +56,7 @@ public class PasscodeLockPresenter {
         
         passcodeLockWindow.windowLevel = 0
         
-        mainWindow?.windowLevel = 1
+        mainWindow?.windowLevel = UIWindowLevelNormal
         mainWindow?.makeKeyAndVisible()
     }
 }
