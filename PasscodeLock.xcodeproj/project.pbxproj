@@ -927,6 +927,7 @@
 				C9D3DF371B91AD12008561EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C9D3DF381B91AD12008561EB /* Build configuration list for PBXNativeTarget "PasscodeLockDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -935,6 +936,7 @@
 				C9D3DF3A1B91AD12008561EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C9D3DF3B1B91AD12008561EB /* Build configuration list for PBXNativeTarget "PasscodeLockDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -943,6 +945,7 @@
 				C9D3DF3D1B91AD12008561EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

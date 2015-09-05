@@ -27,13 +27,13 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
         }
     }
     
-    @IBOutlet public weak var titleLabel: UILabel!
-    @IBOutlet public weak var descriptionLabel: UILabel!
+    @IBOutlet public weak var titleLabel: UILabel?
+    @IBOutlet public weak var descriptionLabel: UILabel?
     @IBOutlet public var placeholders: [PasscodeSignPlaceholderView] = [PasscodeSignPlaceholderView]()
-    @IBOutlet public weak var cancelButton: UIButton!
-    @IBOutlet public weak var deleteSignButton: UIButton!
-    @IBOutlet public weak var touchIDButton: UIButton!
-    @IBOutlet public weak var placeholdersX: NSLayoutConstraint!
+    @IBOutlet public weak var cancelButton: UIButton?
+    @IBOutlet public weak var deleteSignButton: UIButton?
+    @IBOutlet public weak var touchIDButton: UIButton?
+    @IBOutlet public weak var placeholdersX: NSLayoutConstraint?
     
     public var successCallback: ((lock: PasscodeLockType) -> Void)?
     public var dismissCompletionCallback: (()->Void)?
@@ -70,7 +70,7 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
         super.viewDidLoad()
         
         updatePasscodeView()
-        deleteSignButton.enabled = false
+        deleteSignButton?.enabled = false
     }
     
     public override func viewWillAppear(animated: Bool) {
@@ -84,10 +84,10 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
     
     internal func updatePasscodeView() {
         
-        titleLabel.text = passcodeLock.state.title
-        descriptionLabel.text = passcodeLock.state.description
-        cancelButton.hidden = !passcodeLock.state.isCancellableAction
-        touchIDButton.hidden = !passcodeLock.isTouchIDAllowed
+        titleLabel?.text = passcodeLock.state.title
+        descriptionLabel?.text = passcodeLock.state.description
+        cancelButton?.hidden = !passcodeLock.state.isCancellableAction
+        touchIDButton?.hidden = !passcodeLock.isTouchIDAllowed
     }
     
     // MARK: - Actions
@@ -133,12 +133,12 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
     
     internal func animateWrongPassword() {
         
-        deleteSignButton.enabled = false
+        deleteSignButton?.enabled = false
         isPlaceholdersAnimationCompleted = false
         
         animatePlaceholders(placeholders, toState: .Error)
         
-        placeholdersX.constant = -40
+        placeholdersX?.constant = -40
         view.layoutIfNeeded()
         
         UIView.animateWithDuration(
@@ -149,7 +149,7 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
             options: [],
             animations: {
                 
-                self.placeholdersX.constant = 0
+                self.placeholdersX?.constant = 0
                 self.view.layoutIfNeeded()
             },
             completion: { completed in
@@ -178,7 +178,7 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
     
     public func passcodeLockDidSucceed(lock: PasscodeLockType) {
         
-        deleteSignButton.enabled = true
+        deleteSignButton?.enabled = true
         animatePlaceholders(placeholders, toState: .Inactive)
         dismissPasscodeLock(lock)
         successCallback?(lock: lock)
@@ -193,13 +193,13 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
         
         updatePasscodeView()
         animatePlaceholders(placeholders, toState: .Inactive)
-        deleteSignButton.enabled = false
+        deleteSignButton?.enabled = false
     }
     
     public func passcodeLock(lock: PasscodeLockType, addedSignAtIndex index: Int) {
         
         animatePlacehodlerAtIndex(index, toState: .Active)
-        deleteSignButton.enabled = true
+        deleteSignButton?.enabled = true
     }
     
     public func passcodeLock(lock: PasscodeLockType, removedSignAtIndex index: Int) {
@@ -208,7 +208,7 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
         
         if index == 0 {
             
-            deleteSignButton.enabled = false
+            deleteSignButton?.enabled = false
         }
     }
 }
