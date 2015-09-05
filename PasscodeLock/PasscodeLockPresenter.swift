@@ -28,7 +28,7 @@ public class PasscodeLockPresenter {
     public init(mainWindow window: UIWindow?, configuration: PasscodeLockConfigurationType) {
         
         mainWindow = window
-        mainWindow?.windowLevel = UIWindowLevelNormal
+        mainWindow?.windowLevel = 1
         passcodeConfiguration = configuration
     }
     
@@ -38,7 +38,7 @@ public class PasscodeLockPresenter {
         guard !isPasscodePresented else { return }
         
         isPasscodePresented = true
-		passcodeLockWindow.windowLevel = UIWindowLevelAlert
+        passcodeLockWindow.windowLevel = 2
         
         let passcodeLockVC = PasscodeLockViewController(state: .EnterPasscode, configuration: passcodeConfiguration)
         
@@ -53,10 +53,25 @@ public class PasscodeLockPresenter {
     private func dismissPasscodeLock() {
         
         isPasscodePresented = false
-        
-        passcodeLockWindow.windowLevel = 0
-        
-        mainWindow?.windowLevel = UIWindowLevelNormal
+        mainWindow?.windowLevel = 1
         mainWindow?.makeKeyAndVisible()
+        
+        UIView.animateWithDuration(
+            0.5,
+            delay: 0,
+            usingSpringWithDamping: 1,
+            initialSpringVelocity: 0,
+            options: [.CurveEaseInOut],
+            animations: { [weak self] in
+                
+                self?.passcodeLockWindow.alpha = 0
+            },
+            completion: { [weak self] _ in
+                
+                self?.passcodeLockWindow.windowLevel = 0
+                self?.passcodeLockWindow.rootViewController = nil
+                self?.passcodeLockWindow.alpha = 1
+            }
+        )
     }
 }
