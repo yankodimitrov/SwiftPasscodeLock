@@ -37,10 +37,15 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
     
     public var successCallback: ((lock: PasscodeLockType) -> Void)?
     public var dismissCompletionCallback: (()->Void)?
+    public var notificationCenter: NSNotificationCenter?
     
     internal let passcodeConfiguration: PasscodeLockConfigurationType
     internal let passcodeLock: PasscodeLockType
     internal var isPlaceholdersAnimationCompleted = true
+    
+    private var shouldTryToAuthenticateWithBiometrics = false
+    
+    // MARK: - Initializers
     
     public init(state: PasscodeLockStateType, configuration: PasscodeLockConfigurationType) {
         
@@ -53,6 +58,7 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
         super.init(nibName: nibName, bundle: bundle)
         
         passcodeLock.delegate = self
+        notificationCenter = NSNotificationCenter.defaultCenter()
     }
     
     public convenience init(state: LockState, configuration: PasscodeLockConfigurationType) {
@@ -64,6 +70,11 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
         fatalError("init(coder:) has not been implemented")
     }
     
+    deinit {
+        
+        clearEvents()
+    }
+    
     // MARK: - View
     
     public override func viewDidLoad() {
@@ -71,15 +82,15 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
         
         updatePasscodeView()
         deleteSignButton?.enabled = false
+        
+        setupEvents()
     }
     
-    public override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
+    public override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         
-        if passcodeConfiguration.shouldRequestTouchIDImmediately && passcodeLock.isTouchIDAllowed {
-            
-            passcodeLock.authenticateWithBiometrics()
-        }
+        shouldTryToAuthenticateWithBiometrics = false
+        authenticateWithBiometrics()
     }
     
     internal func updatePasscodeView() {
@@ -88,6 +99,32 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
         descriptionLabel?.text = passcodeLock.state.description
         cancelButton?.hidden = !passcodeLock.state.isCancellableAction
         touchIDButton?.hidden = !passcodeLock.isTouchIDAllowed
+    }
+    
+    // MARK: - Events
+    
+    private func setupEvents() {
+        
+        notificationCenter?.addObserver(self, selector: "appDidBecomeActiveHandler:", name: UIApplicationDidBecomeActiveNotification, object: nil)
+        notificationCenter?.addObserver(self, selector: "appDidEnterBackgroundHandler:", name: UIApplicationDidEnterBackgroundNotification, object: nil)
+    }
+    
+    private func clearEvents() {
+        
+        notificationCenter?.removeObserver(self, name: UIApplicationDidBecomeActiveNotification, object: nil)
+        notificationCenter?.removeObserver(self, name: UIApplicationDidEnterBackgroundNotification, object: nil)
+    }
+    
+    public func appDidBecomeActiveHandler(notification: NSNotification) {
+        
+        guard shouldTryToAuthenticateWithBiometrics else { return }
+        
+        authenticateWithBiometrics()
+    }
+    
+    public func appDidEnterBackgroundHandler(notification: NSNotification) {
+        
+        shouldTryToAuthenticateWithBiometrics = true
     }
     
     // MARK: - Actions
@@ -112,6 +149,14 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
     @IBAction func touchIDButtonTap(sender: UIButton) {
         
         passcodeLock.authenticateWithBiometrics()
+    }
+    
+    private func authenticateWithBiometrics() {
+        
+        if passcodeConfiguration.shouldRequestTouchIDImmediately && passcodeLock.isTouchIDAllowed {
+            
+            passcodeLock.authenticateWithBiometrics()
+        }
     }
     
     internal func dismissPasscodeLock(lock: PasscodeLockType) {
