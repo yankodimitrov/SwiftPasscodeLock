@@ -166,8 +166,8 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
             navigationController?.popViewControllerAnimated(true)
             
         } else {
-        
-			dismissViewControllerAnimated( true, completion: nil)
+            
+            dismissViewControllerAnimated(true, completion: nil)
         }
         
         dismissCompletionCallback?()
