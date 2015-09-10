@@ -43,7 +43,7 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
     internal let passcodeLock: PasscodeLockType
     internal var isPlaceholdersAnimationCompleted = true
     
-    private var shouldTryToAuthenticateWithBiometrics = false
+    private var shouldTryToAuthenticateWithBiometrics = true
     
     // MARK: - Initializers
     
@@ -89,8 +89,10 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
     public override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        shouldTryToAuthenticateWithBiometrics = false
-        authenticateWithBiometrics()
+        if shouldTryToAuthenticateWithBiometrics {
+        
+            authenticateWithBiometrics()
+        }
     }
     
     internal func updatePasscodeView() {
@@ -105,26 +107,24 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
     
     private func setupEvents() {
         
-        notificationCenter?.addObserver(self, selector: "appDidBecomeActiveHandler:", name: UIApplicationDidBecomeActiveNotification, object: nil)
+        notificationCenter?.addObserver(self, selector: "appWillEnterForegroundHandler:", name: UIApplicationWillEnterForegroundNotification, object: nil)
         notificationCenter?.addObserver(self, selector: "appDidEnterBackgroundHandler:", name: UIApplicationDidEnterBackgroundNotification, object: nil)
     }
     
     private func clearEvents() {
         
-        notificationCenter?.removeObserver(self, name: UIApplicationDidBecomeActiveNotification, object: nil)
+        notificationCenter?.removeObserver(self, name: UIApplicationWillEnterForegroundNotification, object: nil)
         notificationCenter?.removeObserver(self, name: UIApplicationDidEnterBackgroundNotification, object: nil)
     }
     
-    public func appDidBecomeActiveHandler(notification: NSNotification) {
-        
-        guard shouldTryToAuthenticateWithBiometrics else { return }
+    public func appWillEnterForegroundHandler(notification: NSNotification) {
         
         authenticateWithBiometrics()
     }
     
     public func appDidEnterBackgroundHandler(notification: NSNotification) {
         
-        shouldTryToAuthenticateWithBiometrics = true
+        shouldTryToAuthenticateWithBiometrics = false
     }
     
     // MARK: - Actions
