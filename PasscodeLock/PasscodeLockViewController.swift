@@ -37,6 +37,7 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
     
     public var successCallback: ((lock: PasscodeLockType) -> Void)?
     public var dismissCompletionCallback: (()->Void)?
+    public var animateOnDismiss: Bool
     public var notificationCenter: NSNotificationCenter?
     
     internal let passcodeConfiguration: PasscodeLockConfigurationType
@@ -47,7 +48,9 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
     
     // MARK: - Initializers
     
-    public init(state: PasscodeLockStateType, configuration: PasscodeLockConfigurationType) {
+    public init(state: PasscodeLockStateType, configuration: PasscodeLockConfigurationType, animateOnDismiss: Bool = true) {
+        
+        self.animateOnDismiss = animateOnDismiss
         
         passcodeConfiguration = configuration
         passcodeLock = PasscodeLock(state: state, configuration: configuration)
@@ -61,9 +64,9 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
         notificationCenter = NSNotificationCenter.defaultCenter()
     }
     
-    public convenience init(state: LockState, configuration: PasscodeLockConfigurationType) {
+    public convenience init(state: LockState, configuration: PasscodeLockConfigurationType, animateOnDismiss: Bool = true) {
         
-        self.init(state: state.getState(), configuration: configuration)
+        self.init(state: state.getState(), configuration: configuration, animateOnDismiss: animateOnDismiss)
     }
     
     public required init(coder aDecoder: NSCoder) {
@@ -159,18 +162,29 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
         }
     }
     
-    internal func dismissPasscodeLock(lock: PasscodeLockType) {
-    
-        if navigationController != nil {
+    internal func dismissPasscodeLock(lock: PasscodeLockType, completionHandler: (() -> Void)? = nil) {
         
-            navigationController?.popViewControllerAnimated(true)
+        // if presented as modal
+        if presentingViewController?.presentedViewController == self {
             
-        } else {
+            dismissViewControllerAnimated(animateOnDismiss, completion: { [weak self] _ in
+                
+                self?.dismissCompletionCallback?()
+                
+                completionHandler?()
+            })
             
-            dismissViewControllerAnimated(true, completion: nil)
+            return
+            
+        // if pushed in a navigation controller
+        } else if navigationController != nil {
+        
+            navigationController?.popViewControllerAnimated(animateOnDismiss)
         }
         
         dismissCompletionCallback?()
+        
+        completionHandler?()
     }
     
     // MARK: - Animations
@@ -224,8 +238,9 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
         
         deleteSignButton?.enabled = true
         animatePlaceholders(placeholders, toState: .Inactive)
-        dismissPasscodeLock(lock)
-        successCallback?(lock: lock)
+        dismissPasscodeLock(lock, completionHandler: { _ in
+            successCallback?(lock: lock)
+        })
     }
     
     public func passcodeLockDidFail(lock: PasscodeLockType) {
