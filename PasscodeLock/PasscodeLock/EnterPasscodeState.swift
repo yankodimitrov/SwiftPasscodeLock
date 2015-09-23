@@ -30,7 +30,6 @@ struct EnterPasscodeState: PasscodeLockStateType {
     mutating func acceptPasscode(passcode: [String], fromLock lock: PasscodeLockType) {
         
         guard let currentPasscode = lock.repository.passcode else {
-            assertionFailure("There is no saved passcode")
             return
         }
         
