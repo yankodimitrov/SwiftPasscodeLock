@@ -238,8 +238,8 @@ public class PasscodeLockViewController: UIViewController, PasscodeLockTypeDeleg
         
         deleteSignButton?.enabled = true
         animatePlaceholders(placeholders, toState: .Inactive)
-        dismissPasscodeLock(lock, completionHandler: { _ in
-            successCallback?(lock: lock)
+        dismissPasscodeLock(lock, completionHandler: { [weak self] _ in
+            self?.successCallback?(lock: lock)
         })
     }
     
