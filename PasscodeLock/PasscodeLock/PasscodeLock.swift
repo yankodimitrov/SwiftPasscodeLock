@@ -23,7 +23,7 @@ public class PasscodeLock: PasscodeLockType {
     }
     
     public var isTouchIDAllowed: Bool {
-        return isTouchIDEnabled() && lockState.isTouchIDAllowed
+        return isTouchIDEnabled() && configuration.isTouchIDAllowed && lockState.isTouchIDAllowed
     }
     
     private var lockState: PasscodeLockStateType
