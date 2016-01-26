@@ -39,7 +39,9 @@ public class PasscodeLockPresenter {
         
         isPasscodePresented = true
         passcodeLockWindow.windowLevel = 2
-        
+        passcodeLockWindow.hidden = false
+        mainWindow?.windowLevel = 1
+                
         let passcodeLockVC = PasscodeLockViewController(state: .EnterPasscode, configuration: passcodeConfiguration)
         
         passcodeLockVC.dismissCompletionCallback = { [weak self] in
@@ -71,6 +73,8 @@ public class PasscodeLockPresenter {
                 self?.passcodeLockWindow.windowLevel = 0
                 self?.passcodeLockWindow.rootViewController = nil
                 self?.passcodeLockWindow.alpha = 1
+                self?.passcodeLockWindow.hidden = true
+                self?.mainWindow?.windowLevel = 0
             }
         )
     }
