@@ -23,7 +23,7 @@ public class PasscodeLock: PasscodeLockType {
     }
     
     public var isTouchIDAllowed: Bool {
-        return isTouchIDEnabled() && lockState.isTouchIDAllowed
+        return isTouchIDEnabled() && configuration.isTouchIDAllowed && lockState.isTouchIDAllowed
     }
     
     private var lockState: PasscodeLockStateType
@@ -69,6 +69,8 @@ public class PasscodeLock: PasscodeLockType {
         
         let context = LAContext()
         let reason = localizedStringFor("PasscodeLockTouchIDReason", comment: "TouchID authentication reason")
+
+        context.localizedFallbackTitle = localizedStringFor("PasscodeLockTouchIDButton", comment: "TouchID authentication fallback button")
         
         context.evaluatePolicy(.DeviceOwnerAuthenticationWithBiometrics, localizedReason: reason) {
             success, error in

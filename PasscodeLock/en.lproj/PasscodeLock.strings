@@ -28,3 +28,6 @@
 
 /* Touch ID Reason */
 "PasscodeLockTouchIDReason" = "Authentication required to proceed";
+
+/* Touch ID Fallback Button */
+"PasscodeLockTouchIDButton" = "Enter Passcode";
