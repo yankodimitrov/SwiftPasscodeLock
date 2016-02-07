@@ -48,11 +48,13 @@ public class PasscodeLockPresenter {
         guard !isPasscodePresented else { return }
         
         isPasscodePresented = true
-        passcodeLockWindow.windowLevel = 2
         
+        passcodeLockWindow.windowLevel = 2
         passcodeLockWindow.hidden = false
+        
         mainWindow?.windowLevel = 1
-                
+        mainWindow?.endEditing(true)
+        
         let passcodeLockVC = PasscodeLockViewController(state: .EnterPasscode, configuration: passcodeConfiguration)
         let userDismissCompletionCallback = passcodeLockVC.dismissCompletionCallback
         
