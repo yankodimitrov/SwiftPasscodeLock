@@ -24,7 +24,6 @@ public class PasscodeLockPresenter {
     
     private let passcodeConfiguration: PasscodeLockConfigurationType
     public var isPasscodePresented = false
-    
     public let passcodeLockVC: PasscodeLockViewController
     
     public init(mainWindow window: UIWindow?, configuration: PasscodeLockConfigurationType, viewController: PasscodeLockViewController) {
@@ -37,6 +36,7 @@ public class PasscodeLockPresenter {
     }
 
     public convenience init(mainWindow window: UIWindow?, configuration: PasscodeLockConfigurationType) {
+        
         let passcodeLockVC = PasscodeLockViewController(state: .EnterPasscode, configuration: configuration)
         
         self.init(mainWindow: window, configuration: configuration, viewController: passcodeLockVC)
@@ -75,26 +75,34 @@ public class PasscodeLockPresenter {
         mainWindow?.makeKeyAndVisible()
         
         if animated {
-            UIView.animateWithDuration(
-                0.5,
-                delay: 0,
-                usingSpringWithDamping: 1,
-                initialSpringVelocity: 0,
-                options: [.CurveEaseInOut],
-                animations: { [weak self] in
-                    
-                    self?.passcodeLockWindow.alpha = 0
-                },
-                completion: { [weak self] _ in
-                    
-                    self?.passcodeLockWindow.windowLevel = 0
-                    self?.passcodeLockWindow.rootViewController = nil
-                    self?.passcodeLockWindow.alpha = 1
-                }
-            )
+        
+            animatePasscodeLockDismissal()
+            
         } else {
+            
             passcodeLockWindow.windowLevel = 0
             passcodeLockWindow.rootViewController = nil
         }
+    }
+    
+    internal func animatePasscodeLockDismissal() {
+        
+        UIView.animateWithDuration(
+            0.5,
+            delay: 0,
+            usingSpringWithDamping: 1,
+            initialSpringVelocity: 0,
+            options: [.CurveEaseInOut],
+            animations: { [weak self] in
+                
+                self?.passcodeLockWindow.alpha = 0
+            },
+            completion: { [weak self] _ in
+                
+                self?.passcodeLockWindow.windowLevel = 0
+                self?.passcodeLockWindow.rootViewController = nil
+                self?.passcodeLockWindow.alpha = 1
+            }
+        )
     }
 }
